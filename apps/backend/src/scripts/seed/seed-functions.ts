@@ -26,9 +26,8 @@ import { createConfigurationRuleWorkflow } from '../../workflows/configuration/w
 import { createLocationFulfillmentSetAndAssociateWithSellerWorkflow } from '../../workflows/fulfillment-set/workflows'
 import { createSellerWorkflow } from '../../workflows/seller/workflows'
 import { productsToInsert } from './seed-products'
-import {CONFIGURATION_MODULE} from "../../modules/configuration";
 
-const countries = ['be', 'de', 'dk', 'se', 'fr', 'es', 'it', 'pl', 'cz', 'nl']
+const countries = ['hk']
 
 export async function createSalesChannel(container: MedusaContainer) {
   const salesChannelModuleService = container.resolve(Modules.SALES_CHANNEL)
@@ -74,7 +73,7 @@ export async function createStore(
       update: {
         supported_currencies: [
           {
-            currency_code: 'eur',
+            currency_code: 'hkd',
             is_default: true
           }
         ],
@@ -91,8 +90,8 @@ export async function createRegions(container: MedusaContainer) {
     input: {
       regions: [
         {
-          name: 'Europe',
-          currency_code: 'eur',
+          name: 'Hong Kong',
+          currency_code: 'hkd',
           countries,
           payment_providers: ['pp_system_default']
         }
@@ -149,27 +148,11 @@ export async function createProductCategories(container: MedusaContainer) {
     input: {
       product_categories: [
         {
-          name: 'Sneakers',
+          name: 'Mirrors',
           is_active: true
         },
         {
-          name: 'Sandals',
-          is_active: true
-        },
-        {
-          name: 'Boots',
-          is_active: true
-        },
-        {
-          name: 'Sport',
-          is_active: true
-        },
-        {
-          name: 'Accessories',
-          is_active: true
-        },
-        {
-          name: 'Tops',
+          name: 'Hair Ties',
           is_active: true
         }
       ]
@@ -323,7 +306,7 @@ export async function createServiceZoneForFulfillmentSet(
       data: [
         {
           fulfillment_set_id: fulfillmentSetId,
-          name: `Europe`,
+          name: `Hong Kong`,
           geo_zones: countries.map((c) => ({
             type: 'country',
             country_code: c
@@ -392,7 +375,7 @@ export async function createSellerShippingOption(
           { attribute: 'is_return', value: 'false', operator: 'eq' }
         ],
         prices: [
-          { currency_code: 'eur', amount: 10 },
+          { currency_code: 'hkd', amount: 10 },
           { amount: 10, region_id: regionId }
         ],
         price_type: 'flat',

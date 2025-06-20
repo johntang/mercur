@@ -2,599 +2,1593 @@ import { ProductStatus } from '@medusajs/framework/utils'
 
 export const productsToInsert = [
   {
-    title: 'AIR FORCE 1 LUXE UNISEX Sneakers',
-    handle: 'air-force-1-luxe-unisex-sneakers',
-    subtitle: ' foam midsole with Air-Sole unit',
-    description:
-      'The iconic Air Force 1 with premium materials and enhanced comfort. Features a full-grain leather upper',
+    title: '貓貓咖啡拉花 隨身鏡',
+    handle: 'mirror-1',
+    subtitle: '',
+    description: '貓貓咖啡拉花 隨身鏡',
     is_giftcard: false,
     status: ProductStatus.PUBLISHED,
-    thumbnail:
-      'https://mercur-connect.s3.eu-central-1.amazonaws.com/AIR-FORCE-1-LUXE-UNISEX-1 -01JRYW1QY88H8T98HNPZF7NJTF.png',
+    thumbnail: 'https://i.imgur.com/Ip8uCcB.jpg',
+    discountable: true,
     options: [
       {
-        title: 'Color',
-        values: ['White']
+        title: 'Default',
+        values: ['Default']
       }
     ],
     variants: [
       {
-        title: 'White',
+        title: 'Default',
         allow_backorder: false,
-        manage_inventory: true,
+        manage_inventory: false,
         prices: [
           {
-            amount: 99,
-            currency_code: 'eur'
+            amount: 55,
+            currency_code: 'hkd'
           }
         ],
         options: {
-          Color: 'White'
+          Default: 'Default'
         }
       }
     ],
-    discountable: true,
     images: [
       {
-        url: 'https://mercur-connect.s3.eu-central-1.amazonaws.com/AIR-FORCE-1-LUXE-UNISEX-1 -01JRYW1QY88H8T98HNPZF7NJTF.png'
-      },
-      {
-        url: 'https://mercur-connect.s3.eu-central-1.amazonaws.com/AIR-FORCE-1-LUXE-UNISEX-2 -01JRYW1QY96TV72HCK602R8ASK.png'
+        url: 'https://i.imgur.com/Ip8uCcB.jpg'
       }
     ]
   },
   {
-    title: 'New Runner Flag Sneakers',
-    handle: 'new-runner-flag',
+    title: '貓貓麵包 隨身鏡',
+    handle: 'mirror-2',
     subtitle: '',
-    description:
-      'Heritage-inspired running silhouette featuring distinctive flag details and national color accents. Combines lightweight cushioning, breathable materials, and nostalgic design elements for a unique statement piece with exceptional comfort.',
+    description: '貓貓麵包 隨身鏡',
     is_giftcard: false,
     status: ProductStatus.PUBLISHED,
-    thumbnail:
-      'https://mercur-connect.s3.eu-central-1.amazonaws.com/New-Runner-Flag-1-01JRYW0TG1KQ5T688H810M9BE3.png',
+    thumbnail: 'https://i.imgur.com/hnnhWjm.jpg',
     discountable: true,
-    variants: [
-      {
-        title: 'Brown / 41 / New',
-        allow_backorder: false,
-        manage_inventory: true,
-        options: { Color: 'Brown', Size: '41', Condition: 'New' },
-        variant_rank: 0,
-        prices: [
-          {
-            currency_code: 'eur',
-            amount: 59
-          }
-        ]
-      },
-      {
-        title: 'Brown / 40 / New',
-        allow_backorder: false,
-        manage_inventory: true,
-        options: { Color: 'Brown', Size: '40', Condition: 'New' },
-        variant_rank: 1,
-        prices: [
-          {
-            currency_code: 'eur',
-            amount: 59
-          }
-        ]
-      },
-      {
-        title: 'Brown / 39 / New',
-        allow_backorder: false,
-        manage_inventory: true,
-        variant_rank: 2,
-        options: { Color: 'Brown', Size: '39', Condition: 'New' },
-        prices: [
-          {
-            currency_code: 'eur',
-            amount: 59
-          }
-        ]
-      },
-      {
-        title: 'Brown / 38 / New',
-        allow_backorder: false,
-        manage_inventory: true,
-        variant_rank: 3,
-        options: { Color: 'Brown', Size: '38', Condition: 'New' },
-        prices: [
-          {
-            currency_code: 'eur',
-            amount: 59
-          }
-        ]
-      },
-      {
-        title: 'Brown / 41 / Used',
-        allow_backorder: false,
-        manage_inventory: true,
-        variant_rank: 4,
-        options: { Color: 'Brown', Size: '41', Condition: 'Used' },
-        prices: [
-          {
-            currency_code: 'eur',
-            amount: 39
-          }
-        ]
-      },
-      {
-        title: 'Brown / 40 / Used',
-        allow_backorder: false,
-        manage_inventory: true,
-        variant_rank: 5,
-        options: { Color: 'Brown', Size: '40', Condition: 'Used' },
-        prices: [
-          {
-            currency_code: 'eur',
-            amount: 39
-          }
-        ]
-      },
-      {
-        title: 'Brown / 39 / Used',
-        allow_backorder: false,
-        manage_inventory: true,
-        variant_rank: 5,
-        options: { Color: 'Brown', Size: '39', Condition: 'Used' },
-        prices: [
-          {
-            currency_code: 'eur',
-            amount: 39
-          }
-        ]
-      },
-      {
-        title: 'Brown / 38 / Used',
-        allow_backorder: false,
-        manage_inventory: true,
-        variant_rank: 5,
-        options: { Color: 'Brown', Size: '38', Condition: 'Used' },
-        prices: [
-          {
-            currency_code: 'eur',
-            amount: 39
-          }
-        ]
-      }
-    ],
     options: [
       {
-        title: 'Size',
-        values: ['38', '39', '40', '41']
-      },
-      {
-        title: 'Color',
-        values: ['Brown']
-      },
-      {
-        title: 'Condition',
-        values: ['New', 'Used']
+        title: 'Default',
+        values: ['Default']
       }
     ],
-    images: [
-      {
-        url: 'https://mercur-connect.s3.eu-central-1.amazonaws.com/New-Runner-Flag-1-01JRYW0TG1KQ5T688H810M9BE3.png'
-      }
-    ]
-  },
-  {
-    title: 'CLASSIC CUPSOLE Sneakers',
-    handle: 'classic-cupsole-sneakers',
-    subtitle: '',
-    description: 'Retro court style reimagined for today',
-    is_giftcard: false,
-    status: ProductStatus.PUBLISHED,
-    thumbnail:
-      'https://mercur-connect.s3.eu-central-1.amazonaws.com/CLASSIC-CUPSOLE-1 -01JRYVZQBJ85B2MPZ3Q0KTBYGA.png',
-    discountable: true,
     variants: [
       {
-        title: 'White / Used / 41',
+        title: 'Default',
         allow_backorder: false,
-        manage_inventory: true,
-        variant_rank: 0,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 55,
+            currency_code: 'hkd'
+          }
+        ],
         options: {
-          Color: 'White',
-          Size: '41',
-          Condition: 'Used'
-        },
-        prices: [
-          {
-            currency_code: 'eur',
-            amount: 59
-          }
-        ]
-      },
-      {
-        title: 'Black / Used / 41',
-        allow_backorder: false,
-        manage_inventory: true,
-        variant_rank: 1,
-        options: {
-          Color: 'Black',
-          Size: '41',
-          Condition: 'Used'
-        },
-        prices: [
-          {
-            currency_code: 'eur',
-            amount: 69
-          }
-        ]
-      }
-    ],
-    options: [
-      {
-        title: 'Size',
-        values: ['40', '41']
-      },
-      {
-        title: 'Color',
-        values: ['White', 'Black']
-      },
-      {
-        title: 'Condition',
-        values: ['New', 'Used']
+          Default: 'Default'
+        }
       }
     ],
     images: [
       {
-        url: 'https://mercur-connect.s3.eu-central-1.amazonaws.com/CLASSIC-CUPSOLE-1 -01JRYVZQBJ85B2MPZ3Q0KTBYGA.png'
+        url: 'https://i.imgur.com/hnnhWjm.jpg'
       }
     ]
   },
   {
-    title: 'STORM 96 2K LITE Sneakers',
-    handle: 'storm-96-2k-lite',
+    title: '矮乜乜 髮圈',
+    handle: 'hair-tie-1',
     subtitle: '',
-    description:
-      "Retro-futuristic design combining '90s athletic aesthetics with contemporary technology. Features sculpted, lightweight midsole, mixed material upper, and unique lacing system for stand-out street style with all-day wearability.",
+    description: '矮乜乜 髮圈',
     is_giftcard: false,
     status: ProductStatus.PUBLISHED,
-    thumbnail:
-      'https://mercur-connect.s3.eu-central-1.amazonaws.com/STORM-96-2K-LITE-1-01JRYVZ58MYDM626NAX1E9ZDDQ.png',
+    thumbnail: 'https://i.imgur.com/iPcv54X.jpg',
     discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
     variants: [
       {
-        title: 'Black / 42',
+        title: 'Default',
         allow_backorder: false,
-        manage_inventory: true,
-        variant_rank: 0,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 30,
+            currency_code: 'hkd'
+          }
+        ],
         options: {
-          Color: 'Black',
-          Size: '42'
-        },
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/iPcv54X.jpg'
+      }
+    ]
+  },
+  {
+    title: '醒醒 髮圈',
+    handle: 'hair-tie-2',
+    subtitle: '',
+    description: '醒醒 髮圈',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/lT4ZoQa.jpg',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
         prices: [
           {
-            currency_code: 'eur',
-            amount: 79
+            amount: 30,
+            currency_code: 'hkd'
           }
-        ]
-      },
-      {
-        title: 'Black / 41',
-        allow_backorder: false,
-        manage_inventory: true,
-        variant_rank: 1,
+        ],
         options: {
-          Color: 'Black',
-          Size: '41'
-        },
-        prices: [
-          {
-            currency_code: 'eur',
-            amount: 79
-          }
-        ]
+          Default: 'Default'
+        }
       }
-    ],
-    options: [
-      { title: 'Size', values: ['41', '42'] },
-      { title: 'Color', values: ['Black'] }
     ],
     images: [
       {
-        url: 'https://mercur-connect.s3.eu-central-1.amazonaws.com/STORM-96-2K-LITE-1-01JRYVZ58MYDM626NAX1E9ZDDQ.png'
+        url: 'https://i.imgur.com/lT4ZoQa.jpg'
       }
     ]
   },
   {
-    title: 'U574 UNISEX Sneakers',
-    handle: 'u574-unisex-sneakers',
+    title: '多雲 髮圈',
+    handle: 'hair-tie-3',
     subtitle: '',
-    description:
-      'Featuring the classic 574 silhouette with updated materials and cushioning. Includes ENCAP midsole technology for support and maximum durability, plus a suede/mesh upper for breathability and style.',
+    description: '多雲 髮圈',
     is_giftcard: false,
     status: ProductStatus.PUBLISHED,
-    thumbnail:
-      'https://mercur-connect.s3.eu-central-1.amazonaws.com/U574-UNISEX-1-01JRYVYJVR8ZWQF87V8NS2HHX9.png',
+    thumbnail: 'https://i.imgur.com/f58vrgh.jpg',
     discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
     variants: [
       {
-        title: '37 / Orange / New',
+        title: 'Default',
         allow_backorder: false,
-        manage_inventory: true,
-        variant_rank: 0,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 30,
+            currency_code: 'hkd'
+          }
+        ],
         options: {
-          Color: 'Orange',
-          Size: '37',
-          Condition: 'New'
-        },
-        prices: [
-          {
-            currency_code: 'eur',
-            amount: 87
-          }
-        ]
-      }
-    ],
-    options: [
-      { title: 'Color', values: ['Orange'] },
-      { title: 'Size', values: ['37'] },
-      { title: 'Condition', values: ['Used', 'New'] }
-    ],
-    images: [
-      {
-        url: 'https://mercur-connect.s3.eu-central-1.amazonaws.com/U574-UNISEX-1-01JRYVYJVR8ZWQF87V8NS2HHX9.png'
-      },
-      {
-        url: 'https://mercur-connect.s3.eu-central-1.amazonaws.com/U574-UNISEX-2-01JRYVYJVTX6NRM2CCEPR6T994.png'
-      }
-    ]
-  },
-  {
-    title: 'Air VaporMax 2023 Flyknit Triple Black Sneakers',
-    handle: 'air-vapormax-2023-flyknit-triple-black-sneakers',
-    subtitle: '',
-    description:
-      'Revolutionary cushioning with VaporMax Air technology and lightweight Flyknit construction. The unique sole eliminates excess weight, while the sleek triple black colorway offers versatile styling options.',
-    is_giftcard: false,
-    status: ProductStatus.PUBLISHED,
-    thumbnail:
-      'https://mercur-connect.s3.eu-central-1.amazonaws.com/Air-VaporMax-2023-Flyknit-Triple-Black-1 -01JRYVXVMV7D60YFGHGCY7FD1K.png',
-    discountable: true,
-    variants: [
-      {
-        title: 'Black / 41 / New',
-        allow_backorder: false,
-        manage_inventory: true,
-        variant_rank: 0,
-        options: { Color: 'Black', Size: '41', Condition: 'New' },
-        prices: [
-          {
-            currency_code: 'eur',
-            amount: 99
-          }
-        ]
-      }
-    ],
-    options: [
-      { title: 'Color', values: ['Black'] },
-      { title: 'Size', values: ['41'] },
-      { title: 'Condition', values: ['Used', 'New'] }
-    ],
-    images: [
-      {
-        url: 'https://mercur-connect.s3.eu-central-1.amazonaws.com/Air-VaporMax-2023-Flyknit-Triple-Black-1 -01JRYVXVMV7D60YFGHGCY7FD1K.png'
-      },
-      {
-        url: 'https://mercur-connect.s3.eu-central-1.amazonaws.com/Air-VaporMax-2023-Flyknit-Triple-Black-2 -01JRYVXVMZS1REFQNM6WKJWDPG.png'
-      }
-    ]
-  },
-  {
-    title: 'Reelwind Sneakers',
-    handle: 'reelwind-sneakers',
-    subtitle: '',
-    description:
-      'Performance-meets-lifestyle design with responsive cushioning and flexible support. Made with recycled materials, featuring a breathable upper and durable rubber outsole for all-day comfort.',
-    is_giftcard: false,
-    status: ProductStatus.PUBLISHED,
-    thumbnail:
-      'https://mercur-connect.s3.eu-central-1.amazonaws.com/Reelwind-1-01JRYVWVF8XVHG23RXMNAY2EFJ.png',
-    discountable: true,
-    variants: [
-      {
-        title: 'Red / 38',
-        allow_backorder: false,
-        manage_inventory: true,
-        variant_rank: 0,
-        options: { Color: 'Red', Size: '38' },
-        prices: [
-          {
-            currency_code: 'eur',
-            amount: 59
-          }
-        ]
-      }
-    ],
-    options: [
-      {
-        title: 'Size',
-        values: ['38']
-      },
-      {
-        title: 'Color',
-        values: ['Red']
+          Default: 'Default'
+        }
       }
     ],
     images: [
       {
-        url: 'https://mercur-connect.s3.eu-central-1.amazonaws.com/Reelwind-1-01JRYVWVF8XVHG23RXMNAY2EFJ.png'
+        url: 'https://i.imgur.com/f58vrgh.jpg'
       }
     ]
   },
   {
-    title: 'Cool Balance U9060EEE Sneakers',
-    handle: 'u9060eee',
+    title: '矮乜乜 扣針',
+    handle: 'pin-1',
     subtitle: '',
-    description:
-      'Modern interpretation of the classic running silhouette with exaggerated proportions and enhanced cushioning. Features a combination of premium suede and mesh with an angular, sculptural midsole design for contemporary street style.',
+    description: '矮乜乜 扣針',
     is_giftcard: false,
     status: ProductStatus.PUBLISHED,
-    thumbnail:
-      'https://mercur-connect.s3.eu-central-1.amazonaws.com/U9060EEE-1-01JRYVW83SET4B4ZYZVSK39FDF.png',
+    thumbnail: 'https://i.imgur.com/xVVjLxt.jpg',
     discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
     variants: [
       {
-        title: 'Gray / Used',
+        title: 'Default',
         allow_backorder: false,
-        manage_inventory: true,
-        variant_rank: 1,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 30,
+            currency_code: 'hkd'
+          }
+        ],
         options: {
-          Color: 'Gray',
-          Condition: 'Used'
-        },
-        prices: [
-          {
-            currency_code: 'eur',
-            amount: 39
-          }
-        ]
-      },
-      {
-        title: 'Gray / New',
-        allow_backorder: false,
-        manage_inventory: true,
-        variant_rank: 0,
-        options: { Color: 'Gray', Condition: 'New' },
-        prices: [
-          {
-            currency_code: 'eur',
-            amount: 79
-          }
-        ]
-      }
-    ],
-    options: [
-      {
-        title: 'Condition',
-        values: ['New', 'Used']
-      },
-      {
-        title: 'Color',
-        values: ['Gray']
+          Default: 'Default'
+        }
       }
     ],
     images: [
       {
-        url: 'https://mercur-connect.s3.eu-central-1.amazonaws.com/U9060EEE-1-01JRYVW83SET4B4ZYZVSK39FDF.png'
+        url: 'https://i.imgur.com/xVVjLxt.jpg'
       }
     ]
   },
   {
-    title: 'Brown Sneakers',
-    handle: 'brown-sneakers',
-    subtitle: 'Cosy',
-    description:
-      'Classic brown sneakers with leather and suede upper, and a durable rubber sole. Timeless and versatile.',
-    is_giftcard: false,
-    status: ProductStatus.PUBLISHED,
-    thumbnail:
-      'https://mercur-connect.s3.eu-central-1.amazonaws.com/u2735941527_Product_photography_of_brown_Adidas_samba_Sneaker_80c8f007-dcfa-4e5b-b8ac-bf88851a7376_0-01JRWZZ5V9M2ZC0K0WSC96E4AZ.png',
-    discountable: true,
-    variants: [
-      {
-        title: 'Brown / New',
-        allow_backorder: false,
-        manage_inventory: true,
-        variant_rank: 0,
-        options: {
-          Color: 'Brown',
-          Condition: 'New'
-        },
-        prices: [
-          {
-            currency_code: 'eur',
-            amount: 89
-          }
-        ]
-      }
-    ],
-    options: [
-      { title: 'Color', values: ['Brown'] },
-      { title: 'Condition', values: ['New'] }
-    ],
-    images: [
-      {
-        url: 'https://mercur-connect.s3.eu-central-1.amazonaws.com/u2735941527_Product_photography_of_brown_Adidas_samba_Sneaker_80c8f007-dcfa-4e5b-b8ac-bf88851a7376_0-01JRWZZ5V9M2ZC0K0WSC96E4AZ.png'
-      }
-    ]
-  },
-  {
-    title: 'Green high-tops',
-    handle: 'green-high-tops',
+    title: '醒醒 扣針',
+    handle: 'pin-2',
     subtitle: '',
-    description:
-      'Bold green high-tops with classic canvas upper and rubber sole. A timeless streetwear staple.',
+    description: '醒醒 扣針',
     is_giftcard: false,
     status: ProductStatus.PUBLISHED,
-    thumbnail:
-      'https://mercur-connect.s3.eu-central-1.amazonaws.com/u2735941527_Product_photography_of_green_converse_Sneakers_no_1ef027ea-f31f-4996-b419-63f85716a277_1-01JRWZYCWYAD4QVMRRTFVWHHDK.png',
+    thumbnail: 'https://i.imgur.com/riFsgeh.jpg',
     discountable: true,
-    variants: [
+    options: [
       {
-        title: 'Green / 40 / New',
-        allow_backorder: false,
-        manage_inventory: true,
-        variant_rank: 0,
-        options: { Color: 'Green', Size: '40', Condition: 'New' },
-        prices: [
-          {
-            currency_code: 'eur',
-            amount: 99
-          }
-        ]
+        title: 'Default',
+        values: ['Default']
       }
     ],
-    options: [
-      { title: 'Color', values: ['Green'] },
-      { title: 'Size', values: ['40'] },
-      { title: 'Condition', values: ['Used', 'New'] }
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 30,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
     ],
     images: [
       {
-        url: 'https://mercur-connect.s3.eu-central-1.amazonaws.com/u2735941527_Product_photography_of_green_converse_Sneakers_no_1ef027ea-f31f-4996-b419-63f85716a277_1-01JRWZYCWYAD4QVMRRTFVWHHDK.png'
+        url: 'https://i.imgur.com/riFsgeh.jpg'
       }
     ]
   },
   {
-    title: 'High Sneakers',
-    handle: 'high-sneakers',
-    subtitle: 'Purple, beige, and orange',
-    description:
-      'High Sneakers in a bold mix of purple, beige, and orange. Premium materials, iconic silhouette, and standout color blocking.',
+    title: '多雲 扣針',
+    handle: 'pin-3',
+    subtitle: '',
+    description: '多雲 扣針',
     is_giftcard: false,
     status: ProductStatus.PUBLISHED,
-    thumbnail: 'https://i.imgur.com/zIcEOTS.png',
+    thumbnail: 'https://i.imgur.com/DE6C1eL.jpg',
     discountable: true,
-    variants: [
-      {
-        title: 'High Sneakers',
-        allow_backorder: false,
-        manage_inventory: true,
-        variant_rank: 0,
-        options: { Color: 'Purple' },
-        prices: [
-          {
-            currency_code: 'eur',
-            amount: 119
-          }
-        ]
-      }
-    ],
     options: [
       {
-        title: 'Color',
-        values: ['Purple']
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 30,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
       }
     ],
     images: [
       {
-        url: 'https://i.imgur.com/zIcEOTS.png'
+        url: 'https://i.imgur.com/DE6C1eL.jpg'
+      }
+    ]
+  },
+  {
+    title: '醒醒 金屬徽章',
+    handle: 'badge-1',
+    subtitle: '',
+    description: '醒醒 金屬徽章',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/f1m5AW2.png',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 50,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/f1m5AW2.png'
+      }
+    ]
+  },
+  {
+    title: '貓貓咖啡拉花 鎖匙扣',
+    handle: 'badge-2',
+    subtitle: '',
+    description: '貓貓咖啡拉花 鎖匙扣',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/k13EY68.jpg',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 40,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/k13EY68.jpg'
+      }
+    ]
+  },
+  {
+    title: '貓貓麵包 鎖匙扣',
+    handle: 'badge-3',
+    subtitle: '',
+    description: '貓貓麵包 鎖匙扣',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/oU7qT0V.jpg',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 40,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/oU7qT0V.jpg'
+      }
+    ]
+  },
+  {
+    title: '月亮 鎖匙扣',
+    handle: 'badge-4',
+    subtitle: '',
+    description: '月亮 鎖匙扣',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/0fwh44r.jpg',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 40,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/0fwh44r.jpg'
+      }
+    ]
+  },
+  {
+    title: 'あたり?! 抽獎雪條 明信片',
+    handle: 'postcard-1',
+    subtitle: '',
+    description: 'あたり?! 抽獎雪條 明信片',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/Qm3xt9f.jpg',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/Qm3xt9f.jpg'
+      }
+    ]
+  },
+  {
+    title: 'Happy Birthday to Meow 明信片',
+    handle: 'postcard-2',
+    subtitle: '',
+    description: 'Happy Birthday to Meow 明信片',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/ahWPypZ.jpg',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/ahWPypZ.jpg'
+      }
+    ]
+  },
+  {
+    title: '檸檬方包 明信片',
+    handle: 'postcard-3',
+    subtitle: '',
+    description: '檸檬方包 明信片',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/EMiG4mk.jpg',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/EMiG4mk.jpg'
+      }
+    ]
+  },
+  {
+    title: '休息一下 牛角包 明信片',
+    handle: 'postcard-4',
+    subtitle: '',
+    description: '休息一下 牛角包 明信片',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/fJjJkUB.jpg',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/fJjJkUB.jpg'
+      }
+    ]
+  },
+  {
+    title: '幸福水果三文治 明信片',
+    handle: 'postcard-5',
+    subtitle: '',
+    description: '幸福水果三文治 明信片',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/VkO44Ik.jpg',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/VkO44Ik.jpg'
+      }
+    ]
+  },
+  {
+    title: '蜜瓜梳打 明信片',
+    handle: 'postcard-6',
+    subtitle: '',
+    description: '蜜瓜梳打 明信片',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/tFjUzUU.jpg',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/tFjUzUU.jpg'
+      }
+    ]
+  },
+  {
+    title: '波子汽水梳打 明信片',
+    handle: 'postcard-7',
+    subtitle: '',
+    description: '波子汽水梳打 明信片',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/mSt566J.jpg',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/mSt566J.jpg'
+      }
+    ]
+  },
+  {
+    title: '櫻花開學 明信片',
+    handle: 'postcard-8',
+    subtitle: '',
+    description: '櫻花開學 明信片',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/gxKgAPZ.jpg',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/gxKgAPZ.jpg'
+      }
+    ]
+  },
+  {
+    title: '賞櫻 野餐 明信片',
+    handle: 'postcard-9',
+    subtitle: '',
+    description: '賞櫻 野餐 明信片',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/jg1ijxz.jpg',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/jg1ijxz.jpg'
+      }
+    ]
+  },
+  {
+    title: '草莓蛋糕 明信片',
+    handle: 'postcard-10',
+    subtitle: '',
+    description: '草莓蛋糕 明信片',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/KQzcC61.png',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/KQzcC61.png'
+      }
+    ]
+  },
+  {
+    title: '青提撻 明信片',
+    handle: 'postcard-11',
+    subtitle: '',
+    description: '青提撻 明信片',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/tXWnprX.png',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/tXWnprX.png'
+      }
+    ]
+  },
+  {
+    title: '醒醒繪馬 明信片',
+    handle: 'postcard-12',
+    subtitle: '',
+    description: '醒醒繪馬 明信片',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/48XzyT3.png',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/48XzyT3.png'
+      }
+    ]
+  },
+  {
+    title: 'Stars are Always There 明信片',
+    handle: 'postcard-13',
+    subtitle: '',
+    description: 'Stars are Always There 明信片',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/Ks2c66E.png',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/Ks2c66E.png'
+      }
+    ]
+  },
+  {
+    title: '咩都招 招財貓 明信片',
+    handle: 'postcard-14',
+    subtitle: '',
+    description: '咩都招 招財貓 明信片',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/az7tLUF.png',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/az7tLUF.png'
+      }
+    ]
+  },
+  {
+    title: 'Sing with the Sky 明信片',
+    handle: 'postcard-15',
+    subtitle: '',
+    description: 'Sing with the Sky 明信片',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/A2jd3i5.png',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/A2jd3i5.png'
+      }
+    ]
+  },
+  {
+    title: 'Chat with the Sky 明信片',
+    handle: 'postcard-16',
+    subtitle: '',
+    description: 'Chat with the Sky 明信片',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/RNp3Dsq.png',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/RNp3Dsq.png'
+      }
+    ]
+  },
+  {
+    title: 'Draw with the Sky 明信片',
+    handle: 'postcard-17',
+    subtitle: '',
+    description: 'Draw with the Sky 明信片',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/JvuNj2W.png',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/JvuNj2W.png'
+      }
+    ]
+  },
+  {
+    title: 'Lets Play Together 明信片',
+    handle: 'postcard-18',
+    subtitle: '',
+    description: 'Lets Play Together 明信片',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/tluhjEH.png',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/tluhjEH.png'
+      }
+    ]
+  },
+  {
+    title: 'Stationery Playground Map 明信片',
+    handle: 'postcard-19',
+    subtitle: '',
+    description: 'Stationery Playground Map 明信片',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/CTknOMZ.png',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/CTknOMZ.png'
+      }
+    ]
+  },
+  {
+    title: 'My Dearest Friend 明信片',
+    handle: 'postcard-20',
+    subtitle: '',
+    description: 'My Dearest Friend 明信片',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/8qtSCpu.png',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/8qtSCpu.png'
+      }
+    ]
+  },
+  {
+    title: 'Live with Dreams 明信片',
+    handle: 'postcard-21',
+    subtitle: '',
+    description: 'Live with Dreams 明信片',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/0w843df.png',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/0w843df.png'
+      }
+    ]
+  },
+  {
+    title: 'Cloudy 貼紙包',
+    handle: 'sticker-1',
+    subtitle: '',
+    description: 'Cloudy 貼紙包',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/36hpJPf.png',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/36hpJPf.png'
+      }
+    ]
+  },
+  {
+    title: 'Little Pea & Friends 貼紙包',
+    handle: 'sticker-2',
+    subtitle: '',
+    description: 'Little Pea & Friends 貼紙包',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/8HTBzPW.png',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/8HTBzPW.png'
+      }
+    ]
+  },
+  {
+    title: 'Stationery Playground 貼紙包',
+    handle: 'sticker-3',
+    subtitle: '',
+    description: 'Stationery Playground 貼紙包',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/8MK5xN8.png',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/8MK5xN8.png'
+      }
+    ]
+  },
+  {
+    title: '肉球 貼紙包',
+    handle: 'sticker-4',
+    subtitle: '',
+    description: '肉球 貼紙包',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/sOQkxub.png',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/sOQkxub.png'
+      }
+    ]
+  },
+  {
+    title: '友達 貼紙包',
+    handle: 'sticker-5',
+    subtitle: '',
+    description: '友達 貼紙包',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/18bqKgI.png',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/18bqKgI.png'
+      }
+    ]
+  },
+  {
+    title: '咲く花 貼紙包',
+    handle: 'sticker-6',
+    subtitle: '',
+    description: '咲く花 貼紙包',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/t6wz6e2.png',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/t6wz6e2.png'
+      }
+    ]
+  },
+  {
+    title: '日式咖啡店 貼紙包',
+    handle: 'sticker-7',
+    subtitle: '',
+    description: '日式咖啡店 貼紙包',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/Rn9TmGq.jpeg',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 20,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/Rn9TmGq.jpeg'
+      }
+    ]
+  },
+  {
+    title: '多雲 雲朵 明信片',
+    handle: 'sticker-8',
+    subtitle: '',
+    description: '多雲 雲朵 明信片',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/Jc1xFMU.jpeg',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 25,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/Jc1xFMU.jpeg'
+      }
+    ]
+  },
+  {
+    title: '多雲 雲朵 扣針',
+    handle: 'sticker-9',
+    subtitle: '',
+    description: '多雲 雲朵 扣針',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/sjsaxa6.jpeg',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 50,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/sjsaxa6.jpeg'
+      }
+    ]
+  },
+  {
+    title: '多雲 蜜瓜梳打 扣針',
+    handle: 'sticker-10',
+    subtitle: '',
+    description: '多雲 蜜瓜梳打 扣針',
+    is_giftcard: false,
+    status: ProductStatus.PUBLISHED,
+    thumbnail: 'https://i.imgur.com/59Z6V6y.jpeg',
+    discountable: true,
+    options: [
+      {
+        title: 'Default',
+        values: ['Default']
+      }
+    ],
+    variants: [
+      {
+        title: 'Default',
+        allow_backorder: false,
+        manage_inventory: false,
+        prices: [
+          {
+            amount: 30,
+            currency_code: 'hkd'
+          }
+        ],
+        options: {
+          Default: 'Default'
+        }
+      }
+    ],
+    images: [
+      {
+        url: 'https://i.imgur.com/59Z6V6y.jpeg'
       }
     ]
   }
