@@ -5,6 +5,9 @@ loadEnv(process.env.NODE_ENV || 'development', process.cwd())
 console.log(process.env)
 
 module.exports = defineConfig({
+  admin: {
+    backendUrl: process.env.BACKEND_URL
+  },
   projectConfig: {
     databaseUrl: process.env.DATABASE_URL,
     http: {
