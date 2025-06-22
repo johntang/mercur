@@ -86,6 +86,11 @@ export const SellerGeneralSection = ({ seller }: { seller: any }) => {
               <Text className="font-medium text-ui-fg-subtle w-1/2">Description</Text>
               <Text className="w-1/2">{seller.description}</Text>
             </div>
+            <Divider />
+            <div className="px-8 py-4 flex">
+              <Text className="font-medium text-ui-fg-subtle w-1/2">Handle</Text>
+              <Text className="w-1/2">{seller.handle}</Text>
+            </div>
           </div>
         </Container>
         <Container className="px-0">

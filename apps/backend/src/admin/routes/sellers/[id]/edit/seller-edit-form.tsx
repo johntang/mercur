@@ -21,6 +21,7 @@ export const SellerEditForm = ({ seller }: { seller: any }) => {
       country_code: seller?.country_code || undefined,
       postal_code: seller?.postal_code || undefined,
       tax_id: seller?.tax_id || undefined,
+      photo:seller?.photo || undefined
     },
   });
 
@@ -53,6 +54,10 @@ export const SellerEditForm = ({ seller }: { seller: any }) => {
           <Label>
             Description 
             <Textarea {...form.register("description")} placeholder="Description" className="my-2" />
+          </Label>
+          <Label>
+            Photo 
+            <Input {...form.register("photo")} placeholder="Photo" className="my-2" />
           </Label>
         </div>
         <div>
