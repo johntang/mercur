@@ -6,7 +6,14 @@ console.log(process.env)
 
 module.exports = defineConfig({
   admin: {
-    backendUrl: process.env.BACKEND_URL
+    backendUrl: process.env.BACKEND_URL,
+    vite: () => {
+      return {
+        server: {
+          allowedHosts: ['.railway.app']
+        }
+      }
+    }
   },
   projectConfig: {
     databaseUrl: process.env.DATABASE_URL,
