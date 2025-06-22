@@ -13,10 +13,14 @@
   "scripts": {
     "postinstall": "npx patch-package",
     "dev": "turbo run dev",
+    "start": "turbo run start",
     "build": "turbo run build",
     "format": "turbo run format",
     "lint": "turbo run lint",
     "codegen": "turbo run codegen",
     "generate:oas": "turbo run generate:oas"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }
