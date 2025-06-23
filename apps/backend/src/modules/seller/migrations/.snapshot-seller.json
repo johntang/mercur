@@ -138,6 +138,33 @@
           "nullable": true,
           "mappedType": "text"
         },
+        "ig": {
+          "name": "ig",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "mappedType": "text"
+        },
+        "facebook": {
+          "name": "facebook",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "mappedType": "text"
+        },
+        "banner": {
+          "name": "banner",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "mappedType": "text"
+        },
         "created_at": {
           "name": "created_at",
           "type": "timestamptz",

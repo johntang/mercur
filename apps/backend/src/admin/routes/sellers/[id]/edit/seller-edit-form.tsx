@@ -21,7 +21,10 @@ export const SellerEditForm = ({ seller }: { seller: any }) => {
       country_code: seller?.country_code || undefined,
       postal_code: seller?.postal_code || undefined,
       tax_id: seller?.tax_id || undefined,
-      photo:seller?.photo || undefined
+      photo:seller?.photo || undefined,
+      ig:seller?.ig || undefined,
+      facebook:seller?.facebook || undefined,
+      banner:seller?.banner || undefined,
     },
   });
 
@@ -58,6 +61,18 @@ export const SellerEditForm = ({ seller }: { seller: any }) => {
           <Label>
             Photo 
             <Input {...form.register("photo")} placeholder="Photo" className="my-2" />
+          </Label>
+          <Label>
+            Instagram 
+            <Input {...form.register("ig")} placeholder="Instagram" className="my-2" />
+          </Label>
+          <Label>
+            Facebook 
+            <Input {...form.register("facebook")} placeholder="Facebook" className="my-2" />
+          </Label>
+          <Label>
+            Banner 
+            <Input {...form.register("banner")} placeholder="Banner" className="my-2" />
           </Label>
         </div>
         <div>

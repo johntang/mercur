@@ -50,7 +50,10 @@ export const AdminUpdateSeller = z
     postal_code: z.string().optional(),
     country_code: z.string().optional(),
     tax_id: z.string().optional(),
-    store_status: z.nativeEnum(StoreStatus).optional()
+    store_status: z.nativeEnum(StoreStatus).optional(),
+    ig: z.string().optional(),
+    facebook: z.string().optional(),
+    banner: z.string().optional()
   })
   .strict()
 

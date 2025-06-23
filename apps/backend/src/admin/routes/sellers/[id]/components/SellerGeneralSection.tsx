@@ -12,7 +12,7 @@ export const SellerGeneralSection = ({ seller }: { seller: any }) => {
   const { mutateAsync: suspendSeller } = useUpdateSeller();
 
   const dialog = usePrompt()
-  
+
   const handleSuspend = async () => {
     const res = await dialog({
       title: seller.store_status === "SUSPENDED" ? "Activate account" : "Suspend account",
@@ -90,6 +90,21 @@ export const SellerGeneralSection = ({ seller }: { seller: any }) => {
             <div className="px-8 py-4 flex">
               <Text className="font-medium text-ui-fg-subtle w-1/2">Handle</Text>
               <Text className="w-1/2">{seller.handle}</Text>
+            </div>
+            <Divider />
+            <div className="px-8 py-4 flex">
+              <Text className="font-medium text-ui-fg-subtle w-1/2">Instagram</Text>
+              <Text className="w-1/2">{seller.ig}</Text>
+            </div>
+            <Divider />
+            <div className="px-8 py-4 flex">
+              <Text className="font-medium text-ui-fg-subtle w-1/2">Facebook</Text>
+              <Text className="w-1/2">{seller.facebook}</Text>
+            </div>
+            <Divider />
+            <div className="px-8 py-4 flex">
+              <Text className="font-medium text-ui-fg-subtle w-1/2">Banner</Text>
+              <Text className="w-1/2">{seller.banner}</Text>
             </div>
           </div>
         </Container>

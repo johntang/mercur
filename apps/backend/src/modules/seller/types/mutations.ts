@@ -23,6 +23,9 @@ export interface UpdateSellerDTO {
   handle?: string
   photo?: string
   store_status?: StoreStatus
+  ig?: string
+  facebook?: string
+  banner?: string
 }
 
 export interface CreateMemberDTO {
