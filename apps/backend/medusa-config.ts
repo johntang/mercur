@@ -85,6 +85,9 @@ module.exports = defineConfig({
       }
     },
     {
+      resolve: './src/modules/topic'
+    },
+    {
       resolve: '@medusajs/medusa/payment',
       options: {
         providers: [
