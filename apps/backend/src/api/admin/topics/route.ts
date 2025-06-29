@@ -1,5 +1,9 @@
+import { createTopicWorkflow } from '#/workflows/topic/workflows'
+
 import { MedusaRequest, MedusaResponse } from '@medusajs/framework'
 import { ContainerRegistrationKeys } from '@medusajs/framework/utils'
+
+import { AdminCreateTopicType } from './validators'
 
 /**
  * @oas [get] /admin/reviews
@@ -63,17 +67,44 @@ export async function GET(
   res: MedusaResponse
 ): Promise<void> {
   const query = req.scope.resolve(ContainerRegistrationKeys.QUERY)
-  const { data: reviews, metadata } = await query.graph({
-    entity: 'review',
+
+  console.log('queryConfig', req.queryConfig)
+  const { data: topics, metadata } = await query.graph({
+    entity: 'topic',
     fields: req.queryConfig.fields,
     filters: req.filterableFields,
     pagination: req.queryConfig.pagination
   })
 
   res.json({
-    requests: reviews,
+    topics: topics,
     count: metadata?.count,
     offset: metadata?.skip,
     limit: metadata?.take
   })
+}
+
+export const POST = async (
+  req: MedusaRequest<AdminCreateTopicType>,
+  res: MedusaResponse
+) => {
+  const query = req.scope.resolve(ContainerRegistrationKeys.QUERY)
+  const { result } = await createTopicWorkflow(req.scope).run({
+    input: {
+      name: req.validatedBody.name,
+      image: req.validatedBody.image ?? ''
+    }
+  })
+
+  const {
+    data: [topic]
+  } = await query.graph({
+    entity: 'topic',
+    filters: {
+      id: result.id
+    },
+    ...req.queryConfig
+  })
+
+  res.status(201).json({ topic })
 }

@@ -1,5 +1,10 @@
+import { deleteTopicWorkflow } from '#/workflows/topic/workflows'
+import { updateTopicWorkflow } from '#/workflows/topic/workflows/update-topic'
+
 import { AuthenticatedMedusaRequest, MedusaResponse } from '@medusajs/framework'
 import { ContainerRegistrationKeys } from '@medusajs/framework/utils'
+
+import { AdminUpdateTopicType } from '../validators'
 
 /**
  * @oas [get] /admin/topic/{id}
@@ -53,4 +58,50 @@ export async function GET(
   })
 
   res.json({ topic })
+}
+
+export const POST = async (
+  req: AuthenticatedMedusaRequest<AdminUpdateTopicType>,
+  res: MedusaResponse
+) => {
+  const query = req.scope.resolve(ContainerRegistrationKeys.QUERY)
+  const { id } = req.params
+
+  await updateTopicWorkflow(req.scope).run({
+    input: {
+      id,
+      ...req.validatedBody
+    }
+  })
+
+  const {
+    data: [topic]
+  } = await query.graph({
+    entity: 'topic',
+    fields: req.queryConfig.fields,
+    filters: {
+      id: req.params.id
+    }
+  })
+
+  res.json({ topic })
+}
+
+export const DELETE = async (
+  req: AuthenticatedMedusaRequest,
+  res: MedusaResponse
+) => {
+  const { id } = req.params
+
+  await deleteTopicWorkflow(req.scope).run({
+    input: {
+      id
+    }
+  })
+
+  res.json({
+    id,
+    object: 'topic',
+    deleted: true
+  })
 }

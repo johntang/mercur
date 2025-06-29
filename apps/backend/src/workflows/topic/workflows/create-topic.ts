@@ -13,7 +13,7 @@ interface CreateTopicWorkflowInput {
   image: string
 }
 
-export const createBrandWorkflow = createWorkflow(
+export const createTopicWorkflow = createWorkflow(
   'create-topic',
   (input: CreateTopicWorkflowInput) => {
     const topic = createTopicStep(input)
