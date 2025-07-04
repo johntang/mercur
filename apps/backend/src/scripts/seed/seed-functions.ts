@@ -33,7 +33,7 @@ export async function createSalesChannel(container: MedusaContainer) {
   const salesChannelModuleService = container.resolve(Modules.SALES_CHANNEL)
   let [defaultSalesChannel] = await salesChannelModuleService.listSalesChannels(
     {
-      name: 'Default Sales Channel'
+      name: '網上銷售'
     }
   )
 
@@ -44,7 +44,7 @@ export async function createSalesChannel(container: MedusaContainer) {
       input: {
         salesChannelsData: [
           {
-            name: 'Default Sales Channel'
+            name: '網上銷售'
           }
         ]
       }
@@ -148,11 +148,15 @@ export async function createProductCategories(container: MedusaContainer) {
     input: {
       product_categories: [
         {
-          name: 'Mirrors',
+          name: '配件飾品',
           is_active: true
         },
         {
-          name: 'Hair Ties',
+          name: '風格文具',
+          is_active: true
+        },
+        {
+          name: '美妝保養',
           is_active: true
         }
       ]
@@ -165,26 +169,7 @@ export async function createProductCategories(container: MedusaContainer) {
 export async function createProductCollections(container: MedusaContainer) {
   const { result } = await createCollectionsWorkflow(container).run({
     input: {
-      collections: [
-        {
-          title: 'Luxury'
-        },
-        {
-          title: 'Vintage'
-        },
-        {
-          title: 'Casual'
-        },
-        {
-          title: 'Soho'
-        },
-        {
-          title: 'Streetwear'
-        },
-        {
-          title: 'Y2K'
-        }
-      ]
+      collections: []
     }
   })
 
@@ -196,7 +181,7 @@ export async function createSeller(container: MedusaContainer) {
 
   const { authIdentity } = await authService.register('emailpass', {
     body: {
-      email: 'seller@mercurjs.com',
+      email: 'johnloveyan526@gmail.com',
       password: 'secret'
     }
   })
@@ -206,11 +191,11 @@ export async function createSeller(container: MedusaContainer) {
     input: {
       auth_identity_id: authIdentity?.id,
       member: {
-        name: 'John Doe',
-        email: 'seller@mercurjs.com'
+        name: 'StarrYan',
+        email: 'johnloveyan526@gmail.com'
       },
       seller: {
-        name: 'MercurJS Store'
+        name: 'StarrYan'
       }
     }
   })
@@ -232,9 +217,9 @@ export async function createSellerStockLocation(
         {
           name: `Stock Location for seller ${sellerId}`,
           address: {
-            address_1: 'Random Strasse',
-            city: 'Berlin',
-            country_code: 'de'
+            address_1: 'Address',
+            city: 'Hong Kong',
+            country_code: 'hk'
           }
         }
       ]
@@ -368,7 +353,7 @@ export async function createSellerShippingOption(
         type: {
           label: `${sellerName} shipping`,
           code: sellerName,
-          description: 'Europe shipping'
+          description: 'Hong Kong shipping'
         },
         rules: [
           { value: 'true', attribute: 'enabled_in_store', operator: 'eq' },
@@ -403,10 +388,10 @@ export async function createSellerProducts(
   salesChannelId: string
 ) {
   const productService = container.resolve(Modules.PRODUCT)
-  const collections = await productService.listProductCollections(
-    {},
-    { select: ['id', 'title'] }
-  )
+  // const collections = await productService.listProductCollections(
+  //   {},
+  //   { select: ['id', 'title'] }
+  // )
   const categories = await productService.listProductCategories(
     {},
     { select: ['id', 'name'] }
@@ -414,23 +399,26 @@ export async function createSellerProducts(
 
   const randomCategory = () =>
     categories[Math.floor(Math.random() * categories.length)]
-  const randomCollection = () =>
-    collections[Math.floor(Math.random() * collections.length)]
 
-  const toInsert = productsToInsert.map((p) => ({
-    ...p,
-    categories: [
-      {
-        id: randomCategory().id
-      }
-    ],
-    collection_id: randomCollection().id,
-    sales_channels: [
-      {
-        id: salesChannelId
-      }
-    ]
-  }))
+  const toInsert = productsToInsert.map((p) => {
+    const { category, ...rest } = p
+    return {
+      ...rest,
+      categories: [
+        {
+          id: (
+            categories.find((item) => item.name === category) ||
+            randomCategory()
+          ).id
+        }
+      ],
+      sales_channels: [
+        {
+          id: salesChannelId
+        }
+      ]
+    }
+  })
 
   const { result } = await createProductsWorkflow.run({
     container,

@@ -1,7 +1,10 @@
 import { ProductStatus } from '@medusajs/framework/utils'
 
+import { CATEGORY } from './data'
+
 export const productsToInsert = [
   {
+    category: CATEGORY.beauty,
     title: '貓貓咖啡拉花 隨身鏡',
     handle: 'mirror-1',
     subtitle: '',
@@ -39,6 +42,7 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.beauty,
     title: '貓貓麵包 隨身鏡',
     handle: 'mirror-2',
     subtitle: '',
@@ -76,6 +80,7 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.accessary,
     title: '矮乜乜 髮圈',
     handle: 'hair-tie-1',
     subtitle: '',
@@ -113,6 +118,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.accessary,
+
     title: '醒醒 髮圈',
     handle: 'hair-tie-2',
     subtitle: '',
@@ -150,6 +157,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.accessary,
+
     title: '多雲 髮圈',
     handle: 'hair-tie-3',
     subtitle: '',
@@ -187,6 +196,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '矮乜乜 扣針',
     handle: 'pin-1',
     subtitle: '',
@@ -224,6 +235,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '醒醒 扣針',
     handle: 'pin-2',
     subtitle: '',
@@ -261,6 +274,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '多雲 扣針',
     handle: 'pin-3',
     subtitle: '',
@@ -298,6 +313,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '醒醒 金屬徽章',
     handle: 'badge-1',
     subtitle: '',
@@ -335,6 +352,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '貓貓咖啡拉花 鎖匙扣',
     handle: 'badge-2',
     subtitle: '',
@@ -372,6 +391,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '貓貓麵包 鎖匙扣',
     handle: 'badge-3',
     subtitle: '',
@@ -409,6 +430,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '月亮 鎖匙扣',
     handle: 'badge-4',
     subtitle: '',
@@ -446,6 +469,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: 'あたり?! 抽獎雪條 明信片',
     handle: 'postcard-1',
     subtitle: '',
@@ -483,6 +508,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: 'Happy Birthday to Meow 明信片',
     handle: 'postcard-2',
     subtitle: '',
@@ -520,6 +547,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '檸檬方包 明信片',
     handle: 'postcard-3',
     subtitle: '',
@@ -557,6 +586,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '休息一下 牛角包 明信片',
     handle: 'postcard-4',
     subtitle: '',
@@ -594,6 +625,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '幸福水果三文治 明信片',
     handle: 'postcard-5',
     subtitle: '',
@@ -631,6 +664,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '蜜瓜梳打 明信片',
     handle: 'postcard-6',
     subtitle: '',
@@ -668,6 +703,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '波子汽水梳打 明信片',
     handle: 'postcard-7',
     subtitle: '',
@@ -705,6 +742,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '櫻花開學 明信片',
     handle: 'postcard-8',
     subtitle: '',
@@ -742,6 +781,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '賞櫻 野餐 明信片',
     handle: 'postcard-9',
     subtitle: '',
@@ -779,6 +820,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '草莓蛋糕 明信片',
     handle: 'postcard-10',
     subtitle: '',
@@ -816,6 +859,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '青提撻 明信片',
     handle: 'postcard-11',
     subtitle: '',
@@ -853,6 +898,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '醒醒繪馬 明信片',
     handle: 'postcard-12',
     subtitle: '',
@@ -890,6 +937,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: 'Stars are Always There 明信片',
     handle: 'postcard-13',
     subtitle: '',
@@ -927,6 +976,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '咩都招 招財貓 明信片',
     handle: 'postcard-14',
     subtitle: '',
@@ -964,6 +1015,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: 'Sing with the Sky 明信片',
     handle: 'postcard-15',
     subtitle: '',
@@ -1001,6 +1054,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: 'Chat with the Sky 明信片',
     handle: 'postcard-16',
     subtitle: '',
@@ -1038,6 +1093,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: 'Draw with the Sky 明信片',
     handle: 'postcard-17',
     subtitle: '',
@@ -1075,6 +1132,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: 'Lets Play Together 明信片',
     handle: 'postcard-18',
     subtitle: '',
@@ -1112,6 +1171,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: 'Stationery Playground Map 明信片',
     handle: 'postcard-19',
     subtitle: '',
@@ -1149,6 +1210,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: 'My Dearest Friend 明信片',
     handle: 'postcard-20',
     subtitle: '',
@@ -1186,6 +1249,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: 'Live with Dreams 明信片',
     handle: 'postcard-21',
     subtitle: '',
@@ -1223,6 +1288,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: 'Cloudy 貼紙包',
     handle: 'sticker-1',
     subtitle: '',
@@ -1260,6 +1327,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: 'Little Pea & Friends 貼紙包',
     handle: 'sticker-2',
     subtitle: '',
@@ -1297,6 +1366,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: 'Stationery Playground 貼紙包',
     handle: 'sticker-3',
     subtitle: '',
@@ -1334,6 +1405,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '肉球 貼紙包',
     handle: 'sticker-4',
     subtitle: '',
@@ -1371,6 +1444,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '友達 貼紙包',
     handle: 'sticker-5',
     subtitle: '',
@@ -1408,6 +1483,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '咲く花 貼紙包',
     handle: 'sticker-6',
     subtitle: '',
@@ -1445,6 +1522,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '日式咖啡店 貼紙包',
     handle: 'sticker-7',
     subtitle: '',
@@ -1482,6 +1561,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.stationary,
+
     title: '多雲 雲朵 明信片',
     handle: 'sticker-8',
     subtitle: '',
@@ -1519,6 +1600,8 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.accessary,
+
     title: '多雲 雲朵 扣針',
     handle: 'sticker-9',
     subtitle: '',
@@ -1556,6 +1639,7 @@ export const productsToInsert = [
     ]
   },
   {
+    category: CATEGORY.accessary,
     title: '多雲 蜜瓜梳打 扣針',
     handle: 'sticker-10',
     subtitle: '',

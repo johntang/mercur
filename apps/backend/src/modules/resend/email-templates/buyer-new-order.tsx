@@ -42,13 +42,13 @@ export const BuyerNewOrderEmailTemplate: React.FC<Readonly<EmailTemplateProps>> 
       borderRadius: 10
     }}>
       <h1 style={{ fontSize: '2rem', marginBottom: 8 }}>
-        Thank you for your order, {data.user_name}!<br />
-        Your order #{order.display_id} has been placed!
+        感謝你的訂單, {data.user_name}!<br />
+        訂單 #{order.display_id} 已成功下單!
       </h1>
       <p style={{ fontSize: '1.1rem', marginBottom: 24 }}>
-        Thank you for placing order #{order.display_id}.<br />
+        訂單 #{order.display_id}.<br />
       </p>
-      <div style={{ marginBottom: 24 }}>
+      {/* <div style={{ marginBottom: 24 }}>
         <a
           href={data.order_address}
           style={{
@@ -62,21 +62,21 @@ export const BuyerNewOrderEmailTemplate: React.FC<Readonly<EmailTemplateProps>> 
             marginBottom: 8
           }}
         >
-          Order details
+          訂單資訊
         </a>
         <div style={{ fontSize: 13, color: '#555', marginTop: 8 }}>
           If you can’t click the button, here’s your link: <br />
           <span style={{ color: '#0070f3' }}>{data.order_address}</span>
         </div>
-      </div>
-      <h3 style={{ marginTop: 32, marginBottom: 12 }}>Here’s the breakdown:</h3>
+      </div> */}
+      <h3 style={{ marginTop: 32, marginBottom: 12 }}>訂單如下:</h3>
       <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: 32 }}>
         <thead>
           <tr>
-            <th style={{ textAlign: 'left', padding: '8px', borderBottom: '1px solid #eee' }}>Product</th>
-            <th style={{ textAlign: 'right', padding: '8px', borderBottom: '1px solid #eee' }}>Amount</th>
-            <th style={{ textAlign: 'right', padding: '8px', borderBottom: '1px solid #eee' }}>Qty</th>
-            <th style={{ textAlign: 'right', padding: '8px', borderBottom: '1px solid #eee' }}>Total</th>
+            <th style={{ textAlign: 'left', padding: '8px', borderBottom: '1px solid #eee' }}>商品</th>
+            <th style={{ textAlign: 'right', padding: '8px', borderBottom: '1px solid #eee' }}>單價</th>
+            <th style={{ textAlign: 'right', padding: '8px', borderBottom: '1px solid #eee' }}>數量</th>
+            <th style={{ textAlign: 'right', padding: '8px', borderBottom: '1px solid #eee' }}>總數</th>
           </tr>
         </thead>
         <tbody>
@@ -99,7 +99,7 @@ export const BuyerNewOrderEmailTemplate: React.FC<Readonly<EmailTemplateProps>> 
                   <div>
                     <div style={{ fontWeight: 600 }}>{item.product_title}</div>
                     <div style={{ fontSize: '12px', color: '#555' }}>
-                      Variant: {item.variant_title}
+                      產品: {item.variant_title}
                     </div>
                   </div>
                 </div>
@@ -116,13 +116,13 @@ export const BuyerNewOrderEmailTemplate: React.FC<Readonly<EmailTemplateProps>> 
         </tbody>
         <tfoot>
           <tr>
-            <td><b>Delivery:</b></td>
+            <td><b>運費:</b></td>
             <td colSpan={3}>
               {order.shipping_methods[0].amount} {order.currency_code}
             </td>
           </tr>
           <tr>
-            <td><b>Total:</b></td>
+            <td><b>總計:</b></td>
             <td colSpan={3}>
               {order.total} {order.currency_code}
             </td>
@@ -132,7 +132,7 @@ export const BuyerNewOrderEmailTemplate: React.FC<Readonly<EmailTemplateProps>> 
       <div style={{ marginBottom: 24 }}>
         <div>
           <p style={{ marginBottom: 4 }}>
-            <strong>Shipping address:</strong><br />
+            <strong>送貨地址:</strong><br />
             {order.shipping_address.first_name} {order.shipping_address.last_name},<br />
             {order.shipping_address?.company ? `${order.shipping_address.company}, ` : ''}
             {order.shipping_address.address_1}
@@ -144,19 +144,19 @@ export const BuyerNewOrderEmailTemplate: React.FC<Readonly<EmailTemplateProps>> 
         </div>
         <div>
           <p>
-            <strong>Delivery method:</strong><br />
+            <strong>送貨方式:</strong><br />
             {order.shipping_methods[0].name}
           </p>
         </div>
       </div>
       <div style={{ fontSize: 13, color: '#888', marginBottom: 24 }}>
-        You received this email because you made a purchase or sale on the Mercur marketplace.<br />
-        If you have any questions, please contact our support team.
+        {/* You received this email because you made a purchase or sale on the Mercur marketplace.<br /> */}
+        如你有任何疑問，請聯絡我們
       </div>
       <div style={{ marginTop: 32 }}>
         <div>Best regards,</div>
-        <div style={{ fontWeight: 600 }}>The Mercur Team</div>
-        <div style={{ color: '#888', marginTop: 4 }}>mercurjs.com</div>
+        <div style={{ fontWeight: 600 }}>StarrYan</div>
+        {/* <div style={{ color: '#888', marginTop: 4 }}>mercurjs.com</div> */}
       </div>
     </div>
   )
