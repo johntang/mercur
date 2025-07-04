@@ -1,7 +1,8 @@
 import { AuthenticatedMedusaRequest, MedusaResponse } from '@medusajs/framework'
 import { ContainerRegistrationKeys, Modules } from '@medusajs/framework/utils'
 
-import { SellerTeamInviteEvent } from '../../../modules/requests/types'
+import { SellerTeamInviteEvent } from '@mercurjs/framework'
+
 import { fetchSellerByAuthActorId } from '../../../shared/infra/http/utils'
 import { inviteMemberWorkflow } from '../../../workflows/member/workflows'
 import { VendorInviteMemberType } from './validators'
@@ -28,7 +29,7 @@ import { VendorInviteMemberType } from './validators'
  *             invite:
  *               $ref: "#/components/schemas/VendorMemberInvite"
  * tags:
- *   - Member
+ *   - Vendor Invites
  * security:
  *   - api_token: []
  *   - cookie_auth: []
@@ -137,7 +138,7 @@ export const POST = async (
  *               type: integer
  *               description: The number of items per page
  * tags:
- *   - Member
+ *   - Vendor Invites
  * security:
  *   - api_token: []
  *   - cookie_auth: []

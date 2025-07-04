@@ -56,7 +56,7 @@ import { fetchSellerByAuthActorId } from '../../../../../../shared/infra/http/ut
  *   - cookie_auth: []
  *   - jwt_token: []
  * tags:
- *   - Promotions
+ *   - Vendor Promotions
  * responses:
  *   "200":
  *     description: OK
@@ -112,9 +112,9 @@ export const GET = async (
       entity: sellerProduct.entryPoint,
       fields: ['product_id'],
       filters: {
-        seller_id: seller.id,
-        deleted_at: { $eq: null }
-      }
+        seller_id: seller.id
+      },
+      withDeleted: true
     })
 
     filterableFields['id'] = products.map((p) => p.product_id)
@@ -126,7 +126,7 @@ export const GET = async (
       fields: ['customer_group_id'],
       filters: {
         seller_id: seller.id,
-        deleted_at: { $eq: null }
+        withDeleted: true
       }
     })
 

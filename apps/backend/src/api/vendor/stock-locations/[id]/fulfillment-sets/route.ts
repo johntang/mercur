@@ -4,7 +4,8 @@ import {
 } from '@medusajs/framework/http'
 import { ContainerRegistrationKeys, Modules } from '@medusajs/framework/utils'
 
-import { IntermediateEvents } from '../../../../../modules/algolia/types'
+import { IntermediateEvents } from '@mercurjs/framework'
+
 import { fetchSellerByAuthActorId } from '../../../../../shared/infra/http/utils'
 import { createLocationFulfillmentSetAndAssociateWithSellerWorkflow } from '../../../../../workflows/fulfillment-set/workflows'
 import { VendorCreateStockLocationFulfillmentSetType } from '../../validators'
@@ -43,7 +44,7 @@ import { VendorCreateStockLocationFulfillmentSetType } from '../../validators'
  *             stock_location:
  *               $ref: "#/components/schemas/VendorStockLocation"
  * tags:
- *   - Stock Location
+ *   - Vendor Stock Locations
  * security:
  *   - api_token: []
  *   - cookie_auth: []

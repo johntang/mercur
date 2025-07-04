@@ -64,21 +64,21 @@ module.exports = defineConfig({
     { resolve: './src/modules/split-order-payment' },
     { resolve: './src/modules/attribute' },
     {
-      resolve: './src/modules/taxcode',
+      resolve: '@mercurjs/taxcode',
       options: {
         apiKey: process.env.STRIPE_SECRET_API_KEY
       }
     },
-    { resolve: './src/modules/commission' },
+    { resolve: '@mercurjs/commission' },
     {
-      resolve: './src/modules/payout',
+      resolve: '@mercurjs/payout',
       options: {
         apiKey: process.env.STRIPE_SECRET_API_KEY,
         webhookSecret: process.env.STRIPE_CONNECTED_ACCOUNTS_WEBHOOK_SECRET
       }
     },
     {
-      resolve: './src/modules/algolia',
+      resolve: '@mercurjs/algolia',
       options: {
         apiKey: process.env.ALGOLIA_API_KEY,
         appId: process.env.ALGOLIA_APP_ID
@@ -92,7 +92,7 @@ module.exports = defineConfig({
       options: {
         providers: [
           {
-            resolve: './src/modules/payment-stripe-connect',
+            resolve: '@mercurjs/payment-stripe-connect',
             id: 'stripe-connect',
             options: {
               apiKey: process.env.STRIPE_SECRET_API_KEY
@@ -106,7 +106,7 @@ module.exports = defineConfig({
       options: {
         providers: [
           {
-            resolve: './src/modules/resend',
+            resolve: '@mercurjs/resend',
             id: 'resend',
             options: {
               channels: ['email'],

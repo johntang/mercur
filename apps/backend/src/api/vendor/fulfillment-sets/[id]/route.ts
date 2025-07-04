@@ -2,7 +2,7 @@ import { AuthenticatedMedusaRequest, MedusaResponse } from '@medusajs/framework'
 import { Modules } from '@medusajs/framework/utils'
 import { deleteFulfillmentSetsWorkflow } from '@medusajs/medusa/core-flows'
 
-import { IntermediateEvents } from '../../../../modules/algolia/types'
+import { IntermediateEvents } from '@mercurjs/framework'
 
 /**
  * @oas [delete] /vendor/fulfillment-sets/{id}
@@ -37,7 +37,7 @@ import { IntermediateEvents } from '../../../../modules/algolia/types'
  *               description: Whether or not the items were deleted.
  *               default: true
  * tags:
- *   - Fulfillment Set
+ *   - Vendor Fulfillment Sets
  * security:
  *   - api_token: []
  *   - cookie_auth: []

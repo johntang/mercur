@@ -6,7 +6,8 @@ import {
   updateStockLocationsWorkflow
 } from '@medusajs/medusa/core-flows'
 
-import { IntermediateEvents } from '../../../../modules/algolia/types'
+import { IntermediateEvents } from '@mercurjs/framework'
+
 import { VendorUpdateStockLocationType } from '../validators'
 
 /**
@@ -38,7 +39,7 @@ import { VendorUpdateStockLocationType } from '../validators'
  *             stock_location:
  *               $ref: "#/components/schemas/VendorStockLocation"
  * tags:
- *   - Stock Location
+ *   - Vendor Stock Locations
  * security:
  *   - api_token: []
  *   - cookie_auth: []
@@ -101,7 +102,7 @@ export const GET = async (
  *             stock_location:
  *               $ref: "#/components/schemas/VendorStockLocation"
  * tags:
- *   - Stock Location
+ *   - Vendor Stock Locations
  * security:
  *   - api_token: []
  *   - cookie_auth: []
@@ -176,7 +177,7 @@ export const POST = async (
  *               type: boolean
  *               description: Whether or not the items were deleted
  * tags:
- *   - Stock Location
+ *   - Vendor Stock Locations
  * security:
  *   - api_token: []
  *   - cookie_auth: []

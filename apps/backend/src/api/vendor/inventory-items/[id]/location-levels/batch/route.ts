@@ -5,7 +5,8 @@ import {
 } from '@medusajs/framework/http'
 import { Modules } from '@medusajs/framework/utils'
 
-import { IntermediateEvents } from '../../../../../../modules/algolia/types'
+import { IntermediateEvents } from '@mercurjs/framework'
+
 import { fetchSellerByAuthActorId } from '../../../../../../shared/infra/http/utils'
 import {
   prepareBatchInventoryLevelDeletePayload,
@@ -35,7 +36,7 @@ import { VendorBatchInventoryItemLocationsLevelType } from '../../../validators'
  *   "200":
  *     description: Ok
  * tags:
- *   - Product
+ *   - Vendor Inventory Items
  * security:
  *   - api_token: []
  *   - cookie_auth: []

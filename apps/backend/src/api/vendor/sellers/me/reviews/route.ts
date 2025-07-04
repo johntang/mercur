@@ -31,8 +31,7 @@ import sellerReview from '../../../../../links/seller-review'
  *               type: integer
  *               description: The number of items per page
  * tags:
- *   - Seller
- *   - Review
+ *   - Vendor Reviews
  * security:
  *   - api_token: []
  *   - cookie_auth: []
@@ -46,7 +45,7 @@ export const GET = async (
   const { data: reviews, metadata } = await query.graph({
     entity: sellerReview.entryPoint,
     fields: req.queryConfig.fields.map((field) => `review.${field}`),
-    filters: { ...req.filterableFields, deleted_at: { $eq: null } },
+    filters: { ...req.filterableFields, withDeleted: true },
     pagination: req.queryConfig.pagination
   })
 

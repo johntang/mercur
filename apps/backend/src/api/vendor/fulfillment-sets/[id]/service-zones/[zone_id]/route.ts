@@ -2,7 +2,8 @@ import { AuthenticatedMedusaRequest, MedusaResponse } from '@medusajs/framework'
 import { ContainerRegistrationKeys, Modules } from '@medusajs/framework/utils'
 import { updateServiceZonesWorkflow } from '@medusajs/medusa/core-flows'
 
-import { IntermediateEvents } from '../../../../../../modules/algolia/types'
+import { IntermediateEvents } from '@mercurjs/framework'
+
 import { fetchSellerByAuthActorId } from '../../../../../../shared/infra/http/utils'
 import { deleteVendorServiceZonesWorkflow } from '../../../../../../workflows/fulfillment-set/workflows'
 import { VendorUpdateServiceZoneType } from '../../../validators'
@@ -42,7 +43,7 @@ import { VendorUpdateServiceZoneType } from '../../../validators'
  *             fulfillment_set:
  *               $ref: "#/components/schemas/VendorFulfillmentSet"
  * tags:
- *   - Fulfillment Set
+ *   - Vendor Fulfillment Sets
  * security:
  *   - api_token: []
  *   - cookie_auth: []
@@ -124,7 +125,7 @@ export const POST = async (
  *               description: Whether or not the items were deleted.
  *               default: true
  * tags:
- *   - Service Zone
+ *   - Vendor Fulfillment Sets
  * security:
  *   - api_token: []
  *   - cookie_auth: []

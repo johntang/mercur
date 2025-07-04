@@ -9,7 +9,8 @@ import {
   updateProductsWorkflow
 } from '@medusajs/medusa/core-flows'
 
-import { getAvgRating } from '../../../../modules/reviews/utils'
+import { getAvgRating } from '@mercurjs/reviews'
+
 import {
   VendorGetProductParamsType,
   VendorUpdateProductType
@@ -45,7 +46,7 @@ import {
  *             product:
  *               $ref: "#/components/schemas/VendorProduct"
  * tags:
- *   - Product
+ *   - Vendor Products
  * security:
  *   - api_token: []
  *   - cookie_auth: []
@@ -107,7 +108,7 @@ export const GET = async (
  *             product:
  *               $ref: "#/components/schemas/VendorProduct"
  * tags:
- *   - Product
+ *   - Vendor Products
  * security:
  *   - api_token: []
  *   - cookie_auth: []
@@ -174,7 +175,7 @@ export const POST = async (
  *               type: boolean
  *               description: Whether or not the items were deleted
  * tags:
- *   - Product
+ *   - Vendor Products
  * security:
  *   - api_token: []
  *   - cookie_auth: []

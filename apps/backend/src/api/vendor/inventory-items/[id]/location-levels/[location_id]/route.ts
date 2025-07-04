@@ -2,7 +2,8 @@ import { AuthenticatedMedusaRequest, MedusaResponse } from '@medusajs/framework'
 import { ContainerRegistrationKeys, Modules } from '@medusajs/framework/utils'
 import { updateInventoryLevelsWorkflow } from '@medusajs/medusa/core-flows'
 
-import { IntermediateEvents } from '../../../../../../modules/algolia/types'
+import { IntermediateEvents } from '@mercurjs/framework'
+
 import { VendorUpdateInventoryLevelType } from '../../../validators'
 
 /**
@@ -33,7 +34,7 @@ import { VendorUpdateInventoryLevelType } from '../../../validators'
  *   "202":
  *     description: Accepted
  * tags:
- *   - Product
+ *   - Vendor Inventory Items
  * security:
  *   - api_token: []
  *   - cookie_auth: []
@@ -101,7 +102,7 @@ export const POST = async (
  *   "200":
  *     description: Inventory level
  * tags:
- *   - Product
+ *   - Vendor Inventory Items
  * security:
  *   - api_token: []
  *   - cookie_auth: []

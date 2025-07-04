@@ -3,7 +3,8 @@ import { AuthenticatedMedusaRequest, MedusaResponse } from '@medusajs/framework'
 import {
   selectCustomersChartData,
   selectOrdersChartData
-} from '../../../modules/seller/utils'
+} from '@mercurjs/seller'
+
 import { fetchSellerByAuthActorId } from '../../../shared/infra/http/utils'
 
 /**
@@ -38,7 +39,7 @@ import { fetchSellerByAuthActorId } from '../../../shared/infra/http/utils'
  *               items:
  *                 $ref: "#/components/schemas/VendorDateStatistics"
  * tags:
- *   - Seller
+ *   - Vendor Statistics
  * security:
  *   - api_token: []
  *   - cookie_auth: []

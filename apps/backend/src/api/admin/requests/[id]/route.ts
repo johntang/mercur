@@ -4,7 +4,7 @@ import {
   MedusaError
 } from '@medusajs/framework/utils'
 
-import RequestsModuleService from '../../../../modules/requests/service'
+import { getRequestWorkflowByType } from '../../../../workflows/requests/utils/select-workflow'
 import { updateRequestWorkflow } from '../../../../workflows/requests/workflows'
 import { AdminReviewRequestType } from '../validators'
 
@@ -40,7 +40,7 @@ import { AdminReviewRequestType } from '../validators'
  *               type: string
  *               enum: [accepted,rejected]
  * tags:
- *   - Admin
+ *   - Admin Requests
  * security:
  *   - api_token: []
  *   - cookie_auth: []
@@ -85,7 +85,7 @@ export async function POST(
     })
   }
 
-  const workflow = RequestsModuleService.getWorkflowByType(request.type)
+  const workflow = getRequestWorkflowByType(request.type)
 
   if (!workflow) {
     throw new MedusaError(
@@ -142,7 +142,7 @@ export async function POST(
  *             request:
  *               $ref: "#/components/schemas/AdminRequest"
  * tags:
- *   - Admin
+ *   - Admin Requests
  * security:
  *   - api_token: []
  *   - cookie_auth: []

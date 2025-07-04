@@ -2,9 +2,10 @@ import { AuthenticatedMedusaRequest, MedusaResponse } from '@medusajs/framework'
 import { ContainerRegistrationKeys, Modules } from '@medusajs/framework/utils'
 import { createShippingOptionsWorkflow } from '@medusajs/medusa/core-flows'
 
+import { IntermediateEvents } from '@mercurjs/framework'
+import { SELLER_MODULE } from '@mercurjs/seller'
+
 import sellerShippingOption from '../../../links/seller-shipping-option'
-import { IntermediateEvents } from '../../../modules/algolia/types'
-import { SELLER_MODULE } from '../../../modules/seller'
 import { fetchSellerByAuthActorId } from '../../../shared/infra/http/utils'
 import {
   VendorCreateShippingOptionType,
@@ -33,7 +34,7 @@ import {
  *             shipping_option:
  *               $ref: "#/components/schemas/VendorShippingOption"
  * tags:
- *   - Shipping Option
+ *   - Vendor Shipping Options
  * security:
  *   - api_token: []
  *   - cookie_auth: []
@@ -117,7 +118,7 @@ export const POST = async (
  *               type: integer
  *               description: The number of items per page
  * tags:
- *   - Shipping Option
+ *   - Vendor Shipping Options
  * security:
  *   - api_token: []
  *   - cookie_auth: []

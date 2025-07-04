@@ -1,7 +1,7 @@
 import { MedusaRequest, MedusaResponse } from '@medusajs/framework'
 import { ContainerRegistrationKeys } from '@medusajs/framework/utils'
 
-import { ConfigurationRuleDefaults } from '../../../modules/configuration/service'
+import { ConfigurationRuleDefaults } from '@mercurjs/configuration'
 
 /**
  * @oas [get] /vendor/configuration
@@ -22,7 +22,7 @@ import { ConfigurationRuleDefaults } from '../../../modules/configuration/servic
  *               items:
  *                 $ref: "#/components/schemas/ConfigurationRule"
  * tags:
- *   - Seller
+ *   - Vendor Configuration
  * security:
  *   - api_token: []
  *   - cookie_auth: []
