@@ -45,6 +45,7 @@
     "@mercurjs/requests": "*",
     "@mercurjs/split-order-payment": "*",
     "@mercurjs/taxcode": "*",
+    "@mercurjs/topic": "*",
     "@mercurjs/algolia": "*",
     "@mercurjs/resend": "*",
     "@mercurjs/stripe-tax-provider": "*",
