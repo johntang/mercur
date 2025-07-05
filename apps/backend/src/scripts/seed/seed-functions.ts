@@ -104,7 +104,8 @@ export async function createRegions(container: MedusaContainer) {
 
   await createTaxRegionsWorkflow(container).run({
     input: countries.map((country_code) => ({
-      country_code
+      country_code,
+      provider_id: 'tp_system'
     }))
   })
 
@@ -198,7 +199,14 @@ export async function createSeller(container: MedusaContainer) {
         email: 'johnloveyan526@gmail.com'
       },
       seller: {
-        name: 'StarrYan'
+        name: 'StarrYan',
+        photo:
+          'https://pub-247a6288cd0849ff89b221fb6b395fd7.r2.dev/starryan_profile.jpg',
+        ig: 'https://www.instagram.com/starryan_/',
+        description:
+          'StarrYan，由Starry和Yan組成。因畫師每次抬頭望向星空時，都會被這治癒，能對當刻的煩惱和不快一笑置之。所以希望在幻想的星星世界中，畫下溫暖和療癒的畫。畫作以夢幻的星星、彩雲和大自然作主要元素，為在現實生活受各種壓力的朋友帶來小確幸。',
+        banner:
+          'https://pub-247a6288cd0849ff89b221fb6b395fd7.r2.dev/original.jpg'
       }
     }
   })

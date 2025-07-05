@@ -22,6 +22,9 @@ export type SellerDTO = {
   handle: string;
   photo: string | null;
   members?: Partial<MemberDTO>[];
+  ig: string | null;
+  facebook: string | null;
+  banner: string | null;
 };
 
 export type SellerWithPayoutAccountDTO = SellerDTO & {
