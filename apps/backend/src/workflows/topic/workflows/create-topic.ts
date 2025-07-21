@@ -9,14 +9,20 @@ import { createTopicStep } from '../steps'
 // ...
 
 interface CreateTopicWorkflowInput {
-  name: string
-  image: string
+  data: {
+    name: string
+    image: string
+  }
+  seller_id?: string
 }
 
 export const createTopicWorkflow = createWorkflow(
   'create-topic',
   (input: CreateTopicWorkflowInput) => {
-    const topic = createTopicStep(input)
+    const topic = createTopicStep({
+      name: input.data.name,
+      image: input.data.image
+    })
 
     return new WorkflowResponse(topic)
   }

@@ -1,9 +1,13 @@
 import { createTopicWorkflow } from '#/workflows/topic/workflows'
 
-import { MedusaRequest, MedusaResponse } from '@medusajs/framework'
+import { AuthenticatedMedusaRequest, MedusaResponse } from '@medusajs/framework'
 import { ContainerRegistrationKeys } from '@medusajs/framework/utils'
 
-import { AdminCreateTopicType } from './validators'
+import { fetchSellerByAuthActorId } from '#/shared/infra/http/utils'
+import { SELLER_MODULE } from '@mercurjs/seller'
+import { TOPIC_MODULE } from '@mercurjs/topic'
+import { VendorCreateTopicType } from './validators'
+import sellerTopic from '#/links/seller-topic'
 
 /**
  * @oas [get] /admin/reviews
@@ -63,13 +67,12 @@ import { AdminCreateTopicType } from './validators'
  *   - cookie_auth: []
  */
 export async function GET(
-  req: MedusaRequest,
+  req: AuthenticatedMedusaRequest,
   res: MedusaResponse
 ): Promise<void> {
   const query = req.scope.resolve(ContainerRegistrationKeys.QUERY)
 
-  console.log('queryConfig', req.queryConfig)
-  const { data: topics, metadata } = await query.graph({
+  const { data: sellerTopics, metadata } = await query.graph({
     entity: 'topic',
     fields: req.queryConfig.fields,
     filters: req.filterableFields,
@@ -77,7 +80,7 @@ export async function GET(
   })
 
   res.json({
-    topics: topics,
+    topics: sellerTopics,
     count: metadata?.count,
     offset: metadata?.skip,
     limit: metadata?.take
@@ -85,10 +88,16 @@ export async function GET(
 }
 
 export const POST = async (
-  req: MedusaRequest<AdminCreateTopicType>,
+  req: AuthenticatedMedusaRequest<VendorCreateTopicType>,
   res: MedusaResponse
 ) => {
   const query = req.scope.resolve(ContainerRegistrationKeys.QUERY)
+  const remoteLink = req.scope.resolve(ContainerRegistrationKeys.REMOTE_LINK)
+
+  const seller = await fetchSellerByAuthActorId(
+    req.auth_context.actor_id,
+    req.scope
+  )
 
   const { result } = await createTopicWorkflow(req.scope).run({
     input: {
@@ -96,7 +105,16 @@ export const POST = async (
         name: req.validatedBody.name,
         image: req.validatedBody.image ?? ''
       },
-      seller_id: undefined
+      seller_id: seller.id
+    }
+  })
+
+  await remoteLink.create({
+    [SELLER_MODULE]: {
+      seller_id: seller.id
+    },
+    [TOPIC_MODULE]: {
+      topic_id: result.id
     }
   })
 

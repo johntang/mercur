@@ -2,6 +2,7 @@ import { ExecArgs } from '@medusajs/framework/types'
 import { ContainerRegistrationKeys } from '@medusajs/framework/utils'
 
 import {
+  createAttribute,
   createConfigurationRules,
   createDefaultCommissionLevel,
   createInventoryItemStockLevels,
@@ -66,6 +67,8 @@ export default async function seedMarketplaceData({ container }: ExecArgs) {
   await createInventoryItemStockLevels(container, stockLocation.id)
   logger.info('Creating default commission...')
   await createDefaultCommissionLevel(container)
+  logger.info('Creating default attributes...')
+  await createAttribute(container)
 
   logger.info('=== Finished ===')
   logger.info(`Publishable api key: ${apiKey.token}`)

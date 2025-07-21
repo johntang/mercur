@@ -69,16 +69,19 @@ export const useTopic = (id: string) => {
   })
 }
 
-export const useCreateTopic = () => {
-  const queryClient = useQueryClient()
+export const useUploadFile = () => {
   return useMutation({
-    mutationFn: ({ name, image = '' }: { name: string; image?: string }) =>
-      mercurQuery('/admin/topics', {
+    mutationFn: (files: any[]) => {
+      const formData = new FormData()
+      for (const { file } of files) {
+        formData.append('files', file)
+      }
+
+      console.log(files)
+      return mercurQuery('/admin/uploads', {
         method: 'POST',
-        body: { name, image }
-      }),
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: topicQueryKeys.list() })
+        body: formData
+      })
     }
   })
 }

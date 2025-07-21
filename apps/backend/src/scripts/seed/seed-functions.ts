@@ -1,3 +1,8 @@
+import {
+  createAttributePossibleValuesWorkflow,
+  createAttributesWorkflow
+} from '#/workflows/attribute/workflows'
+
 import { MedusaContainer } from '@medusajs/framework'
 import { ContainerRegistrationKeys, Modules } from '@medusajs/framework/utils'
 import {
@@ -16,11 +21,13 @@ import {
   updateStoresWorkflow
 } from '@medusajs/medusa/core-flows'
 
+import { ATTRIBUTE_MODULE, AttributeModuleService } from '@mercurjs/attribute'
 import {
   CONFIGURATION_MODULE,
   ConfigurationModuleService,
   ConfigurationRuleDefaults
 } from '@mercurjs/configuration'
+import { AttributeUIComponent } from '@mercurjs/framework'
 import { SELLER_MODULE } from '@mercurjs/seller'
 
 import sellerShippingProfile from '../../links/seller-shipping-profile'
@@ -505,4 +512,22 @@ export async function createConfigurationRules(container: MedusaContainer) {
       })
     }
   }
+}
+
+export async function createAttribute(container: MedusaContainer) {
+  await createAttributesWorkflow.run({
+    container,
+    input: {
+      name: 'material',
+      handle: 'material',
+      is_filterable: true,
+
+      ui_component: AttributeUIComponent.SELECT,
+      possible_values: [
+        { rank: 0, value: 'paper' },
+        { rank: 1, value: 'plastic' },
+        { rank: 2, value: 'metal' }
+      ]
+    }
+  })
 }

@@ -25,14 +25,25 @@ export const mercurQuery = async (
     },
     ''
   )
+
+  const finalBody = body instanceof FormData ? body : JSON.stringify(body)
+
+  const reqHeader =
+    body instanceof FormData
+      ? {
+          authorization: `Bearer ${bearer}`,
+          ...headers
+        }
+      : {
+          authorization: `Bearer ${bearer}`,
+          'Content-Type': 'application/json',
+          ...headers
+        }
+
   const response = await fetch(`${url}${params && `?${params}`}`, {
     method: method,
-    headers: {
-      authorization: `Bearer ${bearer}`,
-      'Content-Type': 'application/json',
-      ...headers
-    },
-    body: body ? JSON.stringify(body) : null
+    headers: reqHeader,
+    body: finalBody ?? null
   })
 
   if (!response.ok) {

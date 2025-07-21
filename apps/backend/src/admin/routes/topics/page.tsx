@@ -26,6 +26,7 @@ import {
 import { useDataTable } from '../../hooks/table/use-data-table'
 import { useTopicsTableColumns } from './helpers/use-seller-table-columns'
 import { Topic } from './types'
+import { useUploadFile } from '../../hooks/api/upload'
 
 const PAGE_SIZE = 10
 
@@ -39,7 +40,8 @@ type TopicResponse = {
 const SellersListPage = () => {
   const [open, setOpen] = useState(false)
   const [name, setName] = useState('')
-  const [image, setImage] = useState('')
+
+  const [selectFile, setSelectFile] = useState<File | null>(null)
 
   const { searchParams, raw } = useSellersTableQuery({
     pageSize: PAGE_SIZE,
@@ -59,6 +61,8 @@ const SellersListPage = () => {
 
   const { mutateAsync: createTopic } = useCreateTopic()
 
+  const { mutateAsync: uploadFile } = useUploadFile()
+
   const columns = useColumns()
 
   const { table } = useDataTable({
@@ -72,7 +76,8 @@ const SellersListPage = () => {
 
   const handleInvite = async () => {
     try {
-      await createTopic({ name, image })
+      const res = await uploadFile([{ file: selectFile }])
+      await createTopic({ name, image: res.files[0].url })
       toast.success('Topic added!')
       setOpen(false)
       setName('')
@@ -117,9 +122,14 @@ const SellersListPage = () => {
               <div className="flex flex-col gap-2 mt-6">
                 <Label>Image</Label>
                 <Input
+                  type="file"
                   placeholder="Image"
-                  value={image}
-                  onChange={(e) => setImage(e.target.value)}
+                  // value={image}
+                  onChange={(e) => {
+                    if (e.target.files && e.target.files.length) {
+                      setSelectFile(e.target.files[0])
+                    }
+                  }}
                 />
               </div>
               <div className="flex justify-end">
