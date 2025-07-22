@@ -63,6 +63,7 @@ module.exports = defineConfig({
     { resolve: '@mercurjs/wishlist' },
     { resolve: '@mercurjs/split-order-payment' },
     { resolve: '@mercurjs/attribute' },
+    { resolve: '@mercurjs/topic' },
     {
       resolve: '@mercurjs/taxcode',
       options: {
@@ -83,9 +84,6 @@ module.exports = defineConfig({
         apiKey: process.env.ALGOLIA_API_KEY,
         appId: process.env.ALGOLIA_APP_ID
       }
-    },
-    {
-      resolve: './src/modules/topic'
     },
     {
       resolve: '@medusajs/medusa/payment',

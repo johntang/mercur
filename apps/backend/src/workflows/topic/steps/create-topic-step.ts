@@ -1,7 +1,5 @@
-import { TOPIC_MODULE } from '#/modules/topic'
-import TopicModuleServie from '#/modules/topic/service'
-
 import { StepResponse, createStep } from '@medusajs/framework/workflows-sdk'
+import { TOPIC_MODULE, TopicModuleServie } from '@mercurjs/topic'
 
 export interface CreateTopicStepInput {
   name: string

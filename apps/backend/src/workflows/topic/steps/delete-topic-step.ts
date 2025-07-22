@@ -1,7 +1,7 @@
-import { TOPIC_MODULE } from '#/modules/topic'
-import TopicModuleServie from '#/modules/topic/service'
+import { TOPIC_MODULE } from '@mercurjs/topic'
 
 import { StepResponse, createStep } from '@medusajs/framework/workflows-sdk'
+import TopicModuleServie from '@mercurjs/topic/dist/service'
 
 export interface DeleteTopicStepInput {
   id: string

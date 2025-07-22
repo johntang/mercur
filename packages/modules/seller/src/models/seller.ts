@@ -25,5 +25,7 @@ export const Seller = model.define("seller", {
   onboarding: model.hasOne(() => SellerOnboarding).nullable(),
   ig: model.text().nullable(),
   facebook: model.text().nullable(),
+  line: model.text().nullable(),
+  thread: model.text().nullable(),
   banner: model.text().nullable(),
 });

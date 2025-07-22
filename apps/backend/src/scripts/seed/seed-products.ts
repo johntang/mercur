@@ -8,7 +8,14 @@ export const productsToInsert = [
     title: '貓貓咖啡拉花 隨身鏡',
     handle: 'mirror-1',
     subtitle: '',
-    description: '貓貓咖啡拉花 隨身鏡',
+    description: `「また、きれいになったよね」
+用可愛的鏡子
+希望每次也看到自己變得更漂亮～
+。
+貓貓咖啡拉花 隨身鏡
+尺寸...6 x 6cm
+鏡子：開合式隨身鏡 含普通鏡和放大鏡
+包裝：麻布袋`,
     is_giftcard: false,
     status: ProductStatus.PUBLISHED,
     thumbnail: 'https://i.imgur.com/Ip8uCcB.jpg',
@@ -46,7 +53,14 @@ export const productsToInsert = [
     title: '貓貓麵包 隨身鏡',
     handle: 'mirror-2',
     subtitle: '',
-    description: '貓貓麵包 隨身鏡',
+    description: `「また、きれいになったよね」
+用可愛的鏡子
+希望每次也看到自己變得更漂亮～
+。
+貓貓麵包 隨身鏡
+尺寸...7.5 x 7cm
+鏡子：開合式隨身鏡 含普通鏡和放大鏡
+包裝：麻布袋`,
     is_giftcard: false,
     status: ProductStatus.PUBLISHED,
     thumbnail: 'https://i.imgur.com/hnnhWjm.jpg',

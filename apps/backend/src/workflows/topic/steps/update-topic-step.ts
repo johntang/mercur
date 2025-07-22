@@ -1,5 +1,5 @@
-import { TOPIC_MODULE } from '#/modules/topic'
-import TopicModuleServie from '#/modules/topic/service'
+import { TOPIC_MODULE } from '@mercurjs/topic'
+import TopicModuleServie from '@mercurjs/topic/service'
 
 import { StepResponse, createStep } from '@medusajs/framework/workflows-sdk'
 
