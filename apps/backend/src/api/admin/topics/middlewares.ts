@@ -7,9 +7,9 @@ import { MiddlewareRoute } from '@medusajs/medusa'
 import { applyReferenceFilter } from '../../../shared/infra/http/middlewares/apply-reference-filter'
 import { adminTopicConfig } from './query-config'
 import {
-  AdminCreateRule,
+  AdminCreateTopicRule,
   AdminGetTopicParams,
-  AdminUpdateRule
+  AdminUpdateTopicRule
 } from './validators'
 
 export const topicMiddlewares: MiddlewareRoute[] = [
@@ -31,14 +31,14 @@ export const topicMiddlewares: MiddlewareRoute[] = [
   {
     method: ['POST'],
     matcher: '/admin/topics',
-    middlewares: [validateAndTransformBody(AdminCreateRule)]
+    middlewares: [validateAndTransformBody(AdminCreateTopicRule)]
   },
   {
     method: ['POST'],
     matcher: '/admin/topics/:id',
     middlewares: [
       validateAndTransformQuery(AdminGetTopicParams, adminTopicConfig.retrieve),
-      validateAndTransformBody(AdminUpdateRule)
+      validateAndTransformBody(AdminUpdateTopicRule)
     ]
   }
 ]

@@ -10,8 +10,11 @@ import { createTopicStep } from '../steps'
 
 interface CreateTopicWorkflowInput {
   data: {
-    name: string
-    image: string
+    name?: string
+    image?: string
+    status?: 'SHOW' | 'HIDE'
+    displaySince?: Date
+    displayUntil?: Date
   }
   seller_id?: string
 }
@@ -19,11 +22,7 @@ interface CreateTopicWorkflowInput {
 export const createTopicWorkflow = createWorkflow(
   'create-topic',
   (input: CreateTopicWorkflowInput) => {
-    const topic = createTopicStep({
-      name: input.data.name,
-      image: input.data.image
-    })
-
+    const topic = createTopicStep(input.data)
     return new WorkflowResponse(topic)
   }
 )

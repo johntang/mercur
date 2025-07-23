@@ -72,10 +72,22 @@ export const useTopic = (id: string) => {
 export const useCreateTopic = () => {
   const queryClient = useQueryClient()
   return useMutation({
-    mutationFn: ({ name, image = '' }: { name: string; image?: string }) =>
+    mutationFn: ({
+      name,
+      image = '',
+      status,
+      displaySince,
+      displayUntil
+    }: {
+      name: string
+      image?: string
+      status: 'SHOW' | 'HIDE'
+      displaySince?: Date | null
+      displayUntil: Date | null
+    }) =>
       mercurQuery('/admin/topics', {
         method: 'POST',
-        body: { name, image }
+        body: { name, image, status, displaySince, displayUntil }
       }),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: topicQueryKeys.list() })

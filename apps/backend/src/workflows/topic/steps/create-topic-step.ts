@@ -2,8 +2,11 @@ import { StepResponse, createStep } from '@medusajs/framework/workflows-sdk'
 import { TOPIC_MODULE, TopicModuleServie } from '@mercurjs/topic'
 
 export interface CreateTopicStepInput {
-  name: string
-  image: string
+  name?: string
+  image?: string
+  status?: 'SHOW' | 'HIDE'
+  displaySince?: Date
+  displayUntil?: Date
 }
 
 export const createTopicStep = createStep(

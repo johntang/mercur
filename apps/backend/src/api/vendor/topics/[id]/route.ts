@@ -3,7 +3,7 @@ import { updateTopicWorkflow } from '#/workflows/topic/workflows/update-topic'
 
 import { AuthenticatedMedusaRequest, MedusaResponse } from '@medusajs/framework'
 import { ContainerRegistrationKeys } from '@medusajs/framework/utils'
-import { AdminUpdateTopicType } from '../validators'
+import { VendorUpdateTopicType } from '../validators'
 
 /**
  * @oas [get] /admin/topic/{id}
@@ -60,7 +60,7 @@ export async function GET(
 }
 
 export const POST = async (
-  req: AuthenticatedMedusaRequest<AdminUpdateTopicType>,
+  req: AuthenticatedMedusaRequest<VendorUpdateTopicType>,
   res: MedusaResponse
 ) => {
   const query = req.scope.resolve(ContainerRegistrationKeys.QUERY)

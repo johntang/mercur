@@ -68,7 +68,6 @@ export async function GET(
 ): Promise<void> {
   const query = req.scope.resolve(ContainerRegistrationKeys.QUERY)
 
-  console.log('queryConfig', req.queryConfig)
   const { data: topics, metadata } = await query.graph({
     entity: 'topic',
     fields: req.queryConfig.fields,
@@ -93,8 +92,7 @@ export const POST = async (
   const { result } = await createTopicWorkflow(req.scope).run({
     input: {
       data: {
-        name: req.validatedBody.name,
-        image: req.validatedBody.image ?? ''
+        ...req.validatedBody
       },
       seller_id: undefined
     }

@@ -7,7 +7,6 @@ import { fetchSellerByAuthActorId } from '#/shared/infra/http/utils'
 import { SELLER_MODULE } from '@mercurjs/seller'
 import { TOPIC_MODULE } from '@mercurjs/topic'
 import { VendorCreateTopicType } from './validators'
-import sellerTopic from '#/links/seller-topic'
 
 /**
  * @oas [get] /admin/reviews
@@ -102,8 +101,7 @@ export const POST = async (
   const { result } = await createTopicWorkflow(req.scope).run({
     input: {
       data: {
-        name: req.validatedBody.name,
-        image: req.validatedBody.image ?? ''
+        ...req.validatedBody
       },
       seller_id: seller.id
     }

@@ -2,10 +2,12 @@ import { defineRouteConfig } from '@medusajs/admin-sdk'
 import {
   Button,
   Container,
+  DatePicker,
   Drawer,
   Heading,
   Input,
   Label,
+  Select,
   Text,
   toast,
   usePrompt
@@ -40,6 +42,9 @@ type TopicResponse = {
 const SellersListPage = () => {
   const [open, setOpen] = useState(false)
   const [name, setName] = useState('')
+  const [status, setStatus] = useState<'HIDE' | 'SHOW'>('SHOW')
+  const [displaySince, setDisplaySince] = useState<null | Date>(null)
+  const [displayUntil, setDisplayUntil] = useState<null | Date>(null)
 
   const [selectFile, setSelectFile] = useState<File | null>(null)
 
@@ -74,10 +79,16 @@ const SellersListPage = () => {
     getRowId: (row) => row?.id || ''
   })
 
-  const handleInvite = async () => {
+  const handleCreate = async () => {
     try {
       const res = await uploadFile([{ file: selectFile }])
-      await createTopic({ name, image: res.files[0].url })
+      await createTopic({
+        name,
+        image: res.files[0].url,
+        status,
+        displaySince,
+        displayUntil
+      })
       toast.success('Topic added!')
       setOpen(false)
       setName('')
@@ -132,9 +143,40 @@ const SellersListPage = () => {
                   }}
                 />
               </div>
+              <div className="flex flex-col gap-2 mt-6">
+                <Label>Display Since</Label>
+                <DatePicker
+                  value={displaySince}
+                  onChange={(e) => setDisplaySince(e)}
+                />
+              </div>
+              <div className="flex flex-col gap-2 mt-6">
+                <Label>Display Until</Label>
+                <DatePicker
+                  value={displayUntil}
+                  onChange={(e) => setDisplayUntil(e)}
+                />
+              </div>
+
+              <div className="flex flex-col gap-2 mt-6">
+                <Label>Show</Label>
+                <Select
+                  onValueChange={(value) => setStatus(value as 'SHOW' | 'HIDE')}
+                  value={status}
+                >
+                  <Select.Trigger>
+                    <Select.Value placeholder="Placeholder" />
+                  </Select.Trigger>
+                  <Select.Content>
+                    <Select.Item value={'SHOW'}>Show</Select.Item>
+                    <Select.Item value={'HIDE'}>Hide</Select.Item>
+                  </Select.Content>
+                </Select>
+              </div>
+
               <div className="flex justify-end">
-                <Button className="mt-6" onClick={handleInvite}>
-                  Invite
+                <Button className="mt-6" onClick={handleCreate}>
+                  Submit
                 </Button>
               </div>
             </Drawer.Body>

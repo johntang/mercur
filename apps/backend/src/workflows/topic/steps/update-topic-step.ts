@@ -4,8 +4,11 @@ import { StepResponse, createStep } from '@medusajs/framework/workflows-sdk'
 
 export interface UpdateTopicStepInput {
   id: string
-  name: string
-  image: string
+  name?: string
+  image?: string
+  status?: 'SHOW' | 'HIDE'
+  displaySince?: Date
+  displayUntil?: Date
 }
 
 export const updateTopicStep = createStep(

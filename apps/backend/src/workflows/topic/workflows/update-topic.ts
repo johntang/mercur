@@ -11,6 +11,9 @@ import { updateTopicStep } from '../steps'
 interface UpdateTopicWorkflowInput {
   name: string
   image: string
+  status?: 'SHOW' | 'HIDE'
+  displaySince?: Date
+  displayUntil?: Date
   id: string
 }
 
