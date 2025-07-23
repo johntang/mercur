@@ -44,7 +44,30 @@ export const GET = async (req: MedusaRequest, res: MedusaResponse) => {
     entity: 'topic',
     fields: req.queryConfig.fields,
     filters: {
-      id: req.params.id
+      status: 'SHOW',
+      id: req.params.id,
+      $and: [
+        {
+          $or: [
+            {
+              displaySince: null
+            },
+            {
+              displaySince: { $lt: new Date() }
+            }
+          ]
+        },
+        {
+          $or: [
+            {
+              displayUntil: null
+            },
+            {
+              displayUntil: { $gt: new Date() }
+            }
+          ]
+        }
+      ]
     }
   })
 

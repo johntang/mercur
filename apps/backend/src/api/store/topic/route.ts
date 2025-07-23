@@ -55,12 +55,35 @@ import { ContainerRegistrationKeys } from '@medusajs/framework/utils'
 export const GET = async (req: MedusaRequest, res: MedusaResponse) => {
   const query = req.scope.resolve(ContainerRegistrationKeys.QUERY)
 
-  console.log(req.queryConfig)
-
   const { data: topics, metadata } = await query.graph({
     entity: 'topic',
     fields: req.queryConfig.fields,
-    pagination: req.queryConfig.pagination
+    pagination: req.queryConfig.pagination,
+    filters: {
+      status: 'SHOW',
+      $and: [
+        {
+          $or: [
+            {
+              displaySince: null
+            },
+            {
+              displaySince: { $lt: new Date() }
+            }
+          ]
+        },
+        {
+          $or: [
+            {
+              displayUntil: null
+            },
+            {
+              displayUntil: { $gt: new Date() }
+            }
+          ]
+        }
+      ]
+    }
   })
 
   console.log({ topics })
