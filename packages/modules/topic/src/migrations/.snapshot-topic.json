@@ -1,5 +1,7 @@
 {
-  "namespaces": ["public"],
+  "namespaces": [
+    "public"
+  ],
   "name": "public",
   "tables": [
     {
@@ -39,7 +41,10 @@
           "autoincrement": false,
           "primary": false,
           "nullable": false,
-          "enumItems": ["SHOW", "HIDE"],
+          "enumItems": [
+            "SHOW",
+            "HIDE"
+          ],
           "mappedType": "enum"
         },
         "displaySince": {
@@ -109,7 +114,9 @@
         },
         {
           "keyName": "topic_pkey",
-          "columnNames": ["id"],
+          "columnNames": [
+            "id"
+          ],
           "composite": false,
           "constraint": true,
           "primary": true,

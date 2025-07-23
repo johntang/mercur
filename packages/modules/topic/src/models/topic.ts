@@ -6,5 +6,5 @@ export const Topic = model.define("topic", {
   image: model.text().default(""),
   status: model.enum(["SHOW", "HIDE"]),
   displaySince: model.dateTime(),
-  // displayUntil: model.dateTime(),
+  displayUntil: model.dateTime(),
 });

@@ -1,7 +1,5 @@
 {
-  "namespaces": [
-    "public"
-  ],
+  "namespaces": ["public"],
   "name": "public",
   "tables": [
     {
@@ -23,11 +21,7 @@
           "primary": false,
           "nullable": false,
           "default": "'ACTIVE'",
-          "enumItems": [
-            "ACTIVE",
-            "INACTIVE",
-            "SUSPENDED"
-          ],
+          "enumItems": ["ACTIVE", "INACTIVE", "SUSPENDED"],
           "mappedType": "enum"
         },
         "name": {
@@ -156,6 +150,24 @@
           "nullable": true,
           "mappedType": "text"
         },
+        "line": {
+          "name": "line",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "mappedType": "text"
+        },
+        "thread": {
+          "name": "thread",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "mappedType": "text"
+        },
         "banner": {
           "name": "banner",
           "type": "text",
@@ -221,9 +233,7 @@
         },
         {
           "keyName": "seller_pkey",
-          "columnNames": [
-            "id"
-          ],
+          "columnNames": ["id"],
           "composite": false,
           "constraint": true,
           "primary": true,
@@ -262,11 +272,7 @@
           "primary": false,
           "nullable": false,
           "default": "'owner'",
-          "enumItems": [
-            "owner",
-            "admin",
-            "member"
-          ],
+          "enumItems": ["owner", "admin", "member"],
           "mappedType": "enum"
         },
         "seller_id": {
@@ -363,9 +369,7 @@
         },
         {
           "keyName": "member_invite_pkey",
-          "columnNames": [
-            "id"
-          ],
+          "columnNames": ["id"],
           "composite": false,
           "constraint": true,
           "primary": true,
@@ -376,13 +380,9 @@
       "foreignKeys": {
         "member_invite_seller_id_foreign": {
           "constraintName": "member_invite_seller_id_foreign",
-          "columnNames": [
-            "seller_id"
-          ],
+          "columnNames": ["seller_id"],
           "localTableName": "public.member_invite",
-          "referencedColumnNames": [
-            "id"
-          ],
+          "referencedColumnNames": ["id"],
           "referencedTableName": "public.seller",
           "updateRule": "cascade"
         }
@@ -408,11 +408,7 @@
           "primary": false,
           "nullable": false,
           "default": "'owner'",
-          "enumItems": [
-            "owner",
-            "admin",
-            "member"
-          ],
+          "enumItems": ["owner", "admin", "member"],
           "mappedType": "enum"
         },
         "name": {
@@ -525,9 +521,7 @@
         },
         {
           "keyName": "member_pkey",
-          "columnNames": [
-            "id"
-          ],
+          "columnNames": ["id"],
           "composite": false,
           "constraint": true,
           "primary": true,
@@ -538,13 +532,9 @@
       "foreignKeys": {
         "member_seller_id_foreign": {
           "constraintName": "member_seller_id_foreign",
-          "columnNames": [
-            "seller_id"
-          ],
+          "columnNames": ["seller_id"],
           "localTableName": "public.member",
-          "referencedColumnNames": [
-            "id"
-          ],
+          "referencedColumnNames": ["id"],
           "referencedTableName": "public.seller",
           "updateRule": "cascade"
         }
@@ -667,9 +657,7 @@
         },
         {
           "keyName": "seller_onboarding_pkey",
-          "columnNames": [
-            "id"
-          ],
+          "columnNames": ["id"],
           "composite": false,
           "constraint": true,
           "primary": true,
@@ -680,13 +668,9 @@
       "foreignKeys": {
         "seller_onboarding_seller_id_foreign": {
           "constraintName": "seller_onboarding_seller_id_foreign",
-          "columnNames": [
-            "seller_id"
-          ],
+          "columnNames": ["seller_id"],
           "localTableName": "public.seller_onboarding",
-          "referencedColumnNames": [
-            "id"
-          ],
+          "referencedColumnNames": ["id"],
           "referencedTableName": "public.seller",
           "updateRule": "cascade"
         }
